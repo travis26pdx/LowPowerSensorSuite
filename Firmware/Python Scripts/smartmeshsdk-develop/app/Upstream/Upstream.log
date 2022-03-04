@@ -1,0 +1,1579 @@
+2022-01-27 16:10:36,373 [SerialConnector:INFO] creating object
+2022-01-27 16:10:36,373 [Hdlc:INFO] Creating object
+2022-01-27 16:10:36,404 [Hdlc:INFO] opened port COM9@115200baud
+2022-01-27 16:10:36,404 [SerialConnector:INFO] hdlc notification: connection state=True
+2022-01-27 16:10:36,404 [Hdlc:INFO] thread started
+2022-01-27 16:10:36,404 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getParameter', 'moteInfo']
+- fieldsToFill:     {}
+2022-01-27 16:10:36,404 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            2
+- byteArray:        0c
+2022-01-27 16:10:36,404 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=0 isResponse=False serializedFields=[12]
+2022-01-27 16:10:36,404 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:10:36,404 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:10:36,404 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:10:36,404 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:10:36,920 [SerialConnector:INFO] retry 0
+2022-01-27 16:10:36,920 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=1 isResponse=False serializedFields=[12]
+2022-01-27 16:10:36,920 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:10:36,920 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:10:36,920 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:10:36,920 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:10:37,435 [SerialConnector:INFO] retry 1
+2022-01-27 16:10:37,435 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=2 isResponse=False serializedFields=[12]
+2022-01-27 16:10:37,435 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:10:37,435 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:10:37,435 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:10:37,435 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:10:37,951 [SerialConnector:INFO] retry 2
+2022-01-27 16:10:37,951 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=3 isResponse=False serializedFields=[12]
+2022-01-27 16:10:37,951 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:10:37,951 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:10:37,951 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:10:37,951 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:10:38,467 [SerialConnector:INFO] retry 3
+2022-01-27 16:10:38,467 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=4 isResponse=False serializedFields=[12]
+2022-01-27 16:10:38,467 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:10:38,467 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:10:38,467 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:10:38,467 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:10:38,983 [SerialConnector:INFO] retry 4
+2022-01-27 16:10:38,983 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=5 isResponse=False serializedFields=[12]
+2022-01-27 16:10:38,983 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:10:38,983 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:10:38,983 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:10:38,983 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:10:39,498 [SerialConnector:INFO] retry 5
+2022-01-27 16:10:39,498 [SerialConnector:ERROR] retried 5 times, max allowed is 5
+2022-01-27 16:10:39,498 [Hdlc:INFO] disconnect
+2022-01-27 16:10:39,498 [SerialConnector:INFO] hdlc notification: connection state=False
+2022-01-27 16:10:39,623 [Hdlc:INFO] thread ended
+2022-01-27 16:11:28,823 [SerialConnector:INFO] creating object
+2022-01-27 16:11:28,823 [Hdlc:INFO] Creating object
+2022-01-27 16:11:28,839 [Hdlc:INFO] opened port COM8@115200baud
+2022-01-27 16:11:28,839 [SerialConnector:INFO] hdlc notification: connection state=True
+2022-01-27 16:11:28,839 [Hdlc:INFO] thread started
+2022-01-27 16:11:28,839 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getParameter', 'moteInfo']
+- fieldsToFill:     {}
+2022-01-27 16:11:28,839 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            2
+- byteArray:        0c
+2022-01-27 16:11:28,839 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=0 isResponse=False serializedFields=[12]
+2022-01-27 16:11:28,839 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:11:28,839 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:11:28,839 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:11:28,839 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:11:29,355 [SerialConnector:INFO] retry 0
+2022-01-27 16:11:29,355 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=1 isResponse=False serializedFields=[12]
+2022-01-27 16:11:29,355 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:11:29,355 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:11:29,355 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:11:29,355 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:11:29,870 [SerialConnector:INFO] retry 1
+2022-01-27 16:11:29,870 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=2 isResponse=False serializedFields=[12]
+2022-01-27 16:11:29,870 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:11:29,870 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:11:29,870 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:11:29,870 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:11:30,386 [SerialConnector:INFO] retry 2
+2022-01-27 16:11:30,386 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=3 isResponse=False serializedFields=[12]
+2022-01-27 16:11:30,386 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:11:30,386 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:11:30,386 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:11:30,386 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:11:30,902 [SerialConnector:INFO] retry 3
+2022-01-27 16:11:30,902 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=4 isResponse=False serializedFields=[12]
+2022-01-27 16:11:30,902 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:11:30,902 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:11:30,902 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:11:30,902 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:11:31,408 [SerialConnector:INFO] retry 4
+2022-01-27 16:11:31,408 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=5 isResponse=False serializedFields=[12]
+2022-01-27 16:11:31,408 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:11:31,408 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:11:31,408 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:11:31,408 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:11:31,924 [SerialConnector:INFO] retry 5
+2022-01-27 16:11:31,924 [SerialConnector:ERROR] retried 5 times, max allowed is 5
+2022-01-27 16:11:31,924 [Hdlc:INFO] disconnect
+2022-01-27 16:11:31,924 [SerialConnector:INFO] hdlc notification: connection state=False
+2022-01-27 16:11:32,049 [Hdlc:INFO] thread ended
+2022-01-27 16:11:59,528 [SerialConnector:INFO] creating object
+2022-01-27 16:11:59,528 [Hdlc:INFO] Creating object
+2022-01-27 16:11:59,528 [Hdlc:WARNING] could not open 9@115200baud, reason: could not open port '9': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+2022-01-27 16:12:05,347 [SerialConnector:INFO] creating object
+2022-01-27 16:12:05,347 [Hdlc:INFO] Creating object
+2022-01-27 16:12:05,363 [Hdlc:INFO] opened port COM9@115200baud
+2022-01-27 16:12:05,363 [SerialConnector:INFO] hdlc notification: connection state=True
+2022-01-27 16:12:05,363 [Hdlc:INFO] thread started
+2022-01-27 16:12:05,379 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getParameter', 'moteInfo']
+- fieldsToFill:     {}
+2022-01-27 16:12:05,379 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            2
+- byteArray:        0c
+2022-01-27 16:12:05,379 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=0 isResponse=False serializedFields=[12]
+2022-01-27 16:12:05,379 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:05,379 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:05,379 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:05,379 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:05,882 [SerialConnector:INFO] retry 0
+2022-01-27 16:12:05,882 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=1 isResponse=False serializedFields=[12]
+2022-01-27 16:12:05,882 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:05,882 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:05,882 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:05,882 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:06,388 [SerialConnector:INFO] retry 1
+2022-01-27 16:12:06,388 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=2 isResponse=False serializedFields=[12]
+2022-01-27 16:12:06,388 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:06,388 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:06,388 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:06,388 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:06,904 [SerialConnector:INFO] retry 2
+2022-01-27 16:12:06,904 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=3 isResponse=False serializedFields=[12]
+2022-01-27 16:12:06,904 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:06,904 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:06,904 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:06,904 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:07,419 [SerialConnector:INFO] retry 3
+2022-01-27 16:12:07,419 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=4 isResponse=False serializedFields=[12]
+2022-01-27 16:12:07,419 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:07,419 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:07,419 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:07,419 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:07,935 [SerialConnector:INFO] retry 4
+2022-01-27 16:12:07,935 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=5 isResponse=False serializedFields=[12]
+2022-01-27 16:12:07,935 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:07,935 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:07,935 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:07,935 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:08,451 [SerialConnector:INFO] retry 5
+2022-01-27 16:12:08,451 [SerialConnector:ERROR] retried 5 times, max allowed is 5
+2022-01-27 16:12:08,451 [Hdlc:INFO] disconnect
+2022-01-27 16:12:08,451 [SerialConnector:INFO] hdlc notification: connection state=False
+2022-01-27 16:12:08,576 [Hdlc:INFO] thread ended
+2022-01-27 16:12:17,716 [SerialConnector:INFO] creating object
+2022-01-27 16:12:17,716 [Hdlc:INFO] Creating object
+2022-01-27 16:12:17,732 [Hdlc:INFO] opened port COM5@115200baud
+2022-01-27 16:12:17,732 [SerialConnector:INFO] hdlc notification: connection state=True
+2022-01-27 16:12:17,732 [Hdlc:INFO] thread started
+2022-01-27 16:12:17,732 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getParameter', 'moteInfo']
+- fieldsToFill:     {}
+2022-01-27 16:12:17,732 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            2
+- byteArray:        0c
+2022-01-27 16:12:17,732 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=0 isResponse=False serializedFields=[12]
+2022-01-27 16:12:17,732 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:17,732 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:17,747 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:17,747 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:18,264 [SerialConnector:INFO] retry 0
+2022-01-27 16:12:18,264 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=1 isResponse=False serializedFields=[12]
+2022-01-27 16:12:18,264 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:18,264 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:18,264 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:18,264 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:18,779 [SerialConnector:INFO] retry 1
+2022-01-27 16:12:18,779 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=2 isResponse=False serializedFields=[12]
+2022-01-27 16:12:18,779 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:18,779 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:18,779 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:18,779 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:19,295 [SerialConnector:INFO] retry 2
+2022-01-27 16:12:19,295 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=3 isResponse=False serializedFields=[12]
+2022-01-27 16:12:19,295 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:19,295 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:19,295 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:19,295 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:19,811 [SerialConnector:INFO] retry 3
+2022-01-27 16:12:19,811 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=4 isResponse=False serializedFields=[12]
+2022-01-27 16:12:19,811 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:19,811 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:19,811 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:19,811 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:20,326 [SerialConnector:INFO] retry 4
+2022-01-27 16:12:20,326 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=5 isResponse=False serializedFields=[12]
+2022-01-27 16:12:20,326 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:20,326 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:20,326 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:20,326 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:20,842 [SerialConnector:INFO] retry 5
+2022-01-27 16:12:20,842 [SerialConnector:ERROR] retried 5 times, max allowed is 5
+2022-01-27 16:12:20,842 [Hdlc:INFO] disconnect
+2022-01-27 16:12:20,842 [SerialConnector:INFO] hdlc notification: connection state=False
+2022-01-27 16:12:20,951 [Hdlc:INFO] thread ended
+2022-01-27 16:12:28,131 [SerialConnector:INFO] creating object
+2022-01-27 16:12:28,131 [Hdlc:INFO] Creating object
+2022-01-27 16:12:28,162 [Hdlc:INFO] opened port COM10@115200baud
+2022-01-27 16:12:28,162 [SerialConnector:INFO] hdlc notification: connection state=True
+2022-01-27 16:12:28,162 [Hdlc:INFO] thread started
+2022-01-27 16:12:28,162 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getParameter', 'moteInfo']
+- fieldsToFill:     {}
+2022-01-27 16:12:28,162 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            2
+- byteArray:        0c
+2022-01-27 16:12:28,162 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=0 isResponse=False serializedFields=[12]
+2022-01-27 16:12:28,162 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:28,162 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:28,162 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:28,162 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:28,178 [Crc:DEBUG] calculating for data=0f-09-0a-00-00-00-01-01-00-00-00-00
+2022-01-27 16:12:28,178 [Crc:DEBUG] fcs=0x993f
+2022-01-27 16:12:28,178 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 0f 09 0a 00 00 00 01 01 00 00 00 00
+ - fcs:     99 3f
+ - valid:   True
+2022-01-27 16:12:28,178 [SerialConnector:DEBUG] cmdId=15 length=9 isResponse=False packetId=1 payload=[0, 0, 0, 1, 1, 0, 0, 0, 0]
+2022-01-27 16:12:28,193 [SerialConnector:DEBUG] <--------- moteToPc DATA (1) ----------
+2022-01-27 16:12:28,193 [SerialConnector:DEBUG] _sendInternal cmdId=15 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:12:28,193 [Crc:DEBUG] calculating for data=0f-00-03-00
+2022-01-27 16:12:28,193 [Crc:DEBUG] fcs=0x4f64
+2022-01-27 16:12:28,193 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 0f 00 03 00
+ - fcs:     4f 64
+ - valid:   True
+2022-01-27 16:12:28,193 [SerialConnector:DEBUG] ---------- moteToPc ACK (1) after 0.000 ------->
+2022-01-27 16:12:28,193 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:12:28,193 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               15
+- byteArray:        00-00-00-01-01-00-00-00-00
+2022-01-27 16:12:28,193 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['events']
+- returnFields:     {'events': 1, 'state': 1, 'alarmsList': 0}
+2022-01-27 16:12:28,678 [SerialConnector:INFO] retry 0
+2022-01-27 16:12:28,678 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=1 isResponse=False serializedFields=[12]
+2022-01-27 16:12:28,678 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:28,678 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:12:28,678 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:12:28,678 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:12:28,678 [Crc:DEBUG] calculating for data=02-12-03-00-0c-01-00-17-0d-00-00-32-dc-61-10-21-01-04-01-00-09-0f
+2022-01-27 16:12:28,678 [Crc:DEBUG] fcs=0xf0e4
+2022-01-27 16:12:28,678 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 02 12 03 00 0c 01 00 17 0d 00 00 32 dc 61 10 21 01 04 01 00 09 0f
+ - fcs:     f0 e4
+ - valid:   True
+2022-01-27 16:12:28,678 [SerialConnector:DEBUG] cmdId=2 length=18 isResponse=True packetId=1 payload=[0, 12, 1, 0, 23, 13, 0, 0, 50, 220, 97, 16, 33, 1, 4, 1, 0, 9, 15]
+2022-01-27 16:12:28,693 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.016 --------
+2022-01-27 16:12:28,693 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:12:28,693 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               2
+- byteArray:        00-0c-01-00-17-0d-00-00-32-dc-61-10-21-01-04-01-00-09-0f
+2022-01-27 16:12:28,693 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['getParameter', 'moteInfo']
+- returnFields:     {'RC': 0, 'apiVersion': 1, 'serialNumber': [0, 23, 13, 0, 0, 50, 220, 97], 'hwModel': 16, 'hwRev': 33, 'swVerMajor': 1, 'swVerMinor': 4, 'swVerPatch': 1, 'swVerBuild': 9, 'bootSwVer': 15}
+2022-01-27 16:12:28,693 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:12:28,693 [App:DEBUG] fsm started
+2022-01-27 16:12:28,693 [App:DEBUG] received notif=('events', Tuple_events(events=1, state=1, alarmsList=0))
+2022-01-27 16:12:28,693 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:12:28,693 [App:DEBUG] moteEventsString=boot
+2022-01-27 16:12:28,693 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:12:28,693 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:12:28,693 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:12:28,709 [App:DEBUG] kick fsm try
+2022-01-27 16:12:28,709 [App:DEBUG] kick fsm ok
+2022-01-27 16:12:28,709 [App:DEBUG] return from _notifIndication
+2022-01-27 16:12:30,725 [App:DEBUG] state=ASSESSMOTESTATE
+2022-01-27 16:12:30,725 [App:DEBUG] kick fsm try
+2022-01-27 16:12:30,725 [App:DEBUG] kick fsm canceled
+2022-01-27 16:12:30,725 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:12:30,725 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:12:30,725 [App:DEBUG] state=ASSESSMOTESTATE
+2022-01-27 16:12:30,725 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getParameter', 'moteStatus']
+- fieldsToFill:     {}
+2022-01-27 16:12:30,725 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            2
+- byteArray:        0e
+2022-01-27 16:12:30,725 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=0 isResponse=False serializedFields=[14]
+2022-01-27 16:12:30,725 [SerialConnector:DEBUG] ---------- pcToMote DATA (0) ---------->
+2022-01-27 16:12:30,725 [Crc:DEBUG] calculating for data=02-01-00-0e
+2022-01-27 16:12:30,725 [Crc:DEBUG] fcs=0x a76
+2022-01-27 16:12:30,725 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 00 0e
+ - fcs:     0a 76
+ - valid:   True
+2022-01-27 16:12:30,741 [Crc:DEBUG] calculating for data=02-0b-01-00-0e-01-00-00-00-00-00-00-00-00-00
+2022-01-27 16:12:30,741 [Crc:DEBUG] fcs=0xd3a0
+2022-01-27 16:12:30,741 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 02 0b 01 00 0e 01 00 00 00 00 00 00 00 00 00
+ - fcs:     d3 a0
+ - valid:   True
+2022-01-27 16:12:30,741 [SerialConnector:DEBUG] cmdId=2 length=11 isResponse=True packetId=0 payload=[0, 14, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2022-01-27 16:12:30,741 [SerialConnector:DEBUG] <--------- pcToMote ACK (0) after 0.016 --------
+2022-01-27 16:12:30,741 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:12:30,741 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               2
+- byteArray:        00-0e-01-00-00-00-00-00-00-00-00-00
+2022-01-27 16:12:30,741 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['getParameter', 'moteStatus']
+- returnFields:     {'RC': 0, 'state': 1, 'reserved_0': 0, 'reserved_1': 0, 'numParents': 0, 'alarms': 0, 'reserved_2': 0}
+2022-01-27 16:12:30,741 [App:DEBUG] state=CONFIGURE
+2022-01-27 16:12:30,741 [App:DEBUG] kick fsm try
+2022-01-27 16:12:30,741 [App:DEBUG] kick fsm ok
+2022-01-27 16:12:30,741 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:12:30,741 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:12:30,741 [App:DEBUG] state=CONFIGURE
+2022-01-27 16:12:30,756 [App:DEBUG] state=CONFIGURING_DC
+2022-01-27 16:12:30,756 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['setParameter', 'joinDutyCycle']
+- fieldsToFill:     {'dutyCycle': 255}
+2022-01-27 16:12:30,756 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            1
+- byteArray:        06-ff
+2022-01-27 16:12:30,756 [SerialConnector:DEBUG] _sendInternal cmdId=1 retry=0 isResponse=False serializedFields=[6, 255]
+2022-01-27 16:12:30,756 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:12:30,756 [Crc:DEBUG] calculating for data=01-02-02-06-ff
+2022-01-27 16:12:30,756 [Crc:DEBUG] fcs=0x5513
+2022-01-27 16:12:30,756 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 01 02 02 06 ff
+ - fcs:     55 13
+ - valid:   True
+2022-01-27 16:12:30,756 [Crc:DEBUG] calculating for data=01-01-03-00-06
+2022-01-27 16:12:30,756 [Crc:DEBUG] fcs=0xda52
+2022-01-27 16:12:30,756 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 01 01 03 00 06
+ - fcs:     da 52
+ - valid:   True
+2022-01-27 16:12:30,756 [SerialConnector:DEBUG] cmdId=1 length=1 isResponse=True packetId=1 payload=[0, 6]
+2022-01-27 16:12:30,756 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.000 --------
+2022-01-27 16:12:30,756 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:12:30,756 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               1
+- byteArray:        00-06
+2022-01-27 16:12:30,756 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['setParameter', 'joinDutyCycle']
+- returnFields:     {'RC': 0}
+2022-01-27 16:12:30,756 [App:DEBUG] state=CONFIGURED
+2022-01-27 16:12:30,756 [App:DEBUG] kick fsm try
+2022-01-27 16:12:30,756 [App:DEBUG] kick fsm ok
+2022-01-27 16:12:30,756 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:12:30,756 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:12:30,756 [App:DEBUG] state=CONFIGURED
+2022-01-27 16:12:30,756 [App:DEBUG] state=SEARCHING
+2022-01-27 16:12:30,756 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['join']
+- fieldsToFill:     {}
+2022-01-27 16:12:30,756 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            6
+- byteArray:        
+2022-01-27 16:12:30,756 [SerialConnector:DEBUG] _sendInternal cmdId=6 retry=0 isResponse=False serializedFields=[]
+2022-01-27 16:12:30,772 [SerialConnector:DEBUG] ---------- pcToMote DATA (0) ---------->
+2022-01-27 16:12:30,772 [Crc:DEBUG] calculating for data=06-00-00
+2022-01-27 16:12:30,772 [Crc:DEBUG] fcs=0x1510
+2022-01-27 16:12:30,772 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 06 00 00
+ - fcs:     15 10
+ - valid:   True
+2022-01-27 16:12:30,788 [Crc:DEBUG] calculating for data=06-00-01-00
+2022-01-27 16:12:30,788 [Crc:DEBUG] fcs=0x9cae
+2022-01-27 16:12:30,788 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 06 00 01 00
+ - fcs:     9c ae
+ - valid:   True
+2022-01-27 16:12:30,788 [SerialConnector:DEBUG] cmdId=6 length=0 isResponse=True packetId=0 payload=[0]
+2022-01-27 16:12:30,788 [SerialConnector:DEBUG] <--------- pcToMote ACK (0) after 0.016 --------
+2022-01-27 16:12:30,788 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:12:30,788 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               6
+- byteArray:        00
+2022-01-27 16:12:30,788 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['join']
+- returnFields:     {'RC': 0}
+2022-01-27 16:12:30,788 [App:DEBUG] Tuple_dn_join(RC=0)
+2022-01-27 16:12:30,788 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:12:35,357 [Crc:DEBUG] calculating for data=0f-09-00-00-00-01-00-03-00-00-00-00
+2022-01-27 16:12:35,357 [Crc:DEBUG] fcs=0x8883
+2022-01-27 16:12:35,357 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 0f 09 00 00 00 01 00 03 00 00 00 00
+ - fcs:     88 83
+ - valid:   True
+2022-01-27 16:12:35,357 [SerialConnector:DEBUG] cmdId=15 length=9 isResponse=False packetId=0 payload=[0, 0, 1, 0, 3, 0, 0, 0, 0]
+2022-01-27 16:12:35,357 [SerialConnector:DEBUG] <--------- moteToPc DATA (0) ----------
+2022-01-27 16:12:35,357 [SerialConnector:DEBUG] _sendInternal cmdId=15 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:12:35,357 [Crc:DEBUG] calculating for data=0f-00-01-00
+2022-01-27 16:12:35,357 [Crc:DEBUG] fcs=0xff57
+2022-01-27 16:12:35,357 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 0f 00 01 00
+ - fcs:     ff 57
+ - valid:   True
+2022-01-27 16:12:35,357 [SerialConnector:DEBUG] ---------- moteToPc ACK (0) after 0.000 ------->
+2022-01-27 16:12:35,357 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:12:35,357 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               15
+- byteArray:        00-00-01-00-03-00-00-00-00
+2022-01-27 16:12:35,357 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['events']
+- returnFields:     {'events': 256, 'state': 3, 'alarmsList': 0}
+2022-01-27 16:12:35,357 [App:DEBUG] received notif=('events', Tuple_events(events=256, state=3, alarmsList=0))
+2022-01-27 16:12:35,357 [App:DEBUG] moteEventsString=joinStarted
+2022-01-27 16:12:35,357 [App:DEBUG] state=JOINREQUESTSENT
+2022-01-27 16:12:35,357 [App:DEBUG] return from _notifIndication
+2022-01-27 16:12:49,955 [Crc:DEBUG] calculating for data=0f-09-02-00-00-00-20-05-00-00-00-00
+2022-01-27 16:12:49,955 [Crc:DEBUG] fcs=0xebfa
+2022-01-27 16:12:49,955 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 0f 09 02 00 00 00 20 05 00 00 00 00
+ - fcs:     eb fa
+ - valid:   True
+2022-01-27 16:12:49,955 [SerialConnector:DEBUG] cmdId=15 length=9 isResponse=False packetId=1 payload=[0, 0, 0, 32, 5, 0, 0, 0, 0]
+2022-01-27 16:12:49,955 [SerialConnector:DEBUG] <--------- moteToPc DATA (1) ----------
+2022-01-27 16:12:49,955 [SerialConnector:DEBUG] _sendInternal cmdId=15 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:12:49,955 [Crc:DEBUG] calculating for data=0f-00-03-00
+2022-01-27 16:12:49,955 [Crc:DEBUG] fcs=0x4f64
+2022-01-27 16:12:49,955 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 0f 00 03 00
+ - fcs:     4f 64
+ - valid:   True
+2022-01-27 16:12:49,955 [SerialConnector:DEBUG] ---------- moteToPc ACK (1) after 0.000 ------->
+2022-01-27 16:12:49,955 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:12:49,955 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               15
+- byteArray:        00-00-00-20-05-00-00-00-00
+2022-01-27 16:12:49,955 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['events']
+- returnFields:     {'events': 32, 'state': 5, 'alarmsList': 0}
+2022-01-27 16:12:49,955 [App:DEBUG] received notif=('events', Tuple_events(events=32, state=5, alarmsList=0))
+2022-01-27 16:12:49,955 [App:DEBUG] moteEventsString=operational
+2022-01-27 16:12:49,955 [App:DEBUG] state=OPERATIONAL
+2022-01-27 16:12:49,955 [App:DEBUG] return from _notifIndication
+2022-01-27 16:13:03,601 [Crc:DEBUG] calculating for data=0f-09-00-00-00-00-80-05-00-00-00-00
+2022-01-27 16:13:03,601 [Crc:DEBUG] fcs=0x6722
+2022-01-27 16:13:03,601 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 0f 09 00 00 00 00 80 05 00 00 00 00
+ - fcs:     67 22
+ - valid:   True
+2022-01-27 16:13:03,601 [SerialConnector:DEBUG] cmdId=15 length=9 isResponse=False packetId=0 payload=[0, 0, 0, 128, 5, 0, 0, 0, 0]
+2022-01-27 16:13:03,601 [SerialConnector:DEBUG] <--------- moteToPc DATA (0) ----------
+2022-01-27 16:13:03,601 [SerialConnector:DEBUG] _sendInternal cmdId=15 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:13:03,601 [Crc:DEBUG] calculating for data=0f-00-01-00
+2022-01-27 16:13:03,601 [Crc:DEBUG] fcs=0xff57
+2022-01-27 16:13:03,601 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 0f 00 01 00
+ - fcs:     ff 57
+ - valid:   True
+2022-01-27 16:13:03,601 [SerialConnector:DEBUG] ---------- moteToPc ACK (0) after 0.000 ------->
+2022-01-27 16:13:03,601 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:13:03,601 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               15
+- byteArray:        00-00-00-80-05-00-00-00-00
+2022-01-27 16:13:03,601 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['events']
+- returnFields:     {'events': 128, 'state': 5, 'alarmsList': 0}
+2022-01-27 16:13:03,601 [App:DEBUG] received notif=('events', Tuple_events(events=128, state=5, alarmsList=0))
+2022-01-27 16:13:03,601 [App:DEBUG] moteEventsString=svcChange
+2022-01-27 16:13:03,601 [App:DEBUG] state=JOINED
+2022-01-27 16:13:03,601 [App:DEBUG] kick fsm try
+2022-01-27 16:13:03,617 [App:DEBUG] kick fsm ok
+2022-01-27 16:13:03,617 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:13:03,617 [App:DEBUG] return from _notifIndication
+2022-01-27 16:13:03,617 [App:DEBUG] state=JOINED
+2022-01-27 16:13:03,617 [App:DEBUG] state=REQUESTINGSERVICE
+2022-01-27 16:13:03,617 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['requestService']
+- fieldsToFill:     {'destAddr': 65534, 'serviceType': 0, 'value': 5000}
+2022-01-27 16:13:03,617 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            17
+- byteArray:        ff-fe-00-00-00-13-88
+2022-01-27 16:13:03,617 [SerialConnector:DEBUG] _sendInternal cmdId=17 retry=0 isResponse=False serializedFields=[255, 254, 0, 0, 0, 19, 136]
+2022-01-27 16:13:03,617 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:13:03,617 [Crc:DEBUG] calculating for data=11-07-02-ff-fe-00-00-00-13-88
+2022-01-27 16:13:03,617 [Crc:DEBUG] fcs=0x9dbf
+2022-01-27 16:13:03,617 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 11 07 02 ff fe 00 00 00 13 88
+ - fcs:     9d bf
+ - valid:   True
+2022-01-27 16:13:03,632 [Crc:DEBUG] calculating for data=11-00-03-00
+2022-01-27 16:13:03,632 [Crc:DEBUG] fcs=0xac 9
+2022-01-27 16:13:03,632 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 11 00 03 00
+ - fcs:     ac 09
+ - valid:   True
+2022-01-27 16:13:03,648 [SerialConnector:DEBUG] cmdId=17 length=0 isResponse=True packetId=1 payload=[0]
+2022-01-27 16:13:03,648 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.031 --------
+2022-01-27 16:13:03,648 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:13:03,648 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               17
+- byteArray:        00
+2022-01-27 16:13:03,648 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['requestService']
+- returnFields:     {'RC': 0}
+2022-01-27 16:13:03,648 [App:DEBUG] Tuple_dn_requestService(RC=0)
+2022-01-27 16:13:03,648 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:14:04,046 [Crc:DEBUG] calculating for data=0f-09-02-00-00-00-80-05-00-00-00-00
+2022-01-27 16:14:04,061 [Crc:DEBUG] fcs=0x297a
+2022-01-27 16:14:04,061 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 0f 09 02 00 00 00 80 05 00 00 00 00
+ - fcs:     29 7a
+ - valid:   True
+2022-01-27 16:14:04,061 [SerialConnector:DEBUG] cmdId=15 length=9 isResponse=False packetId=1 payload=[0, 0, 0, 128, 5, 0, 0, 0, 0]
+2022-01-27 16:14:04,061 [SerialConnector:DEBUG] <--------- moteToPc DATA (1) ----------
+2022-01-27 16:14:04,061 [SerialConnector:DEBUG] _sendInternal cmdId=15 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:14:04,061 [Crc:DEBUG] calculating for data=0f-00-03-00
+2022-01-27 16:14:04,061 [Crc:DEBUG] fcs=0x4f64
+2022-01-27 16:14:04,061 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 0f 00 03 00
+ - fcs:     4f 64
+ - valid:   True
+2022-01-27 16:14:04,061 [SerialConnector:DEBUG] ---------- moteToPc ACK (1) after 0.000 ------->
+2022-01-27 16:14:04,061 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:14:04,061 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               15
+- byteArray:        00-00-00-80-05-00-00-00-00
+2022-01-27 16:14:04,061 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['events']
+- returnFields:     {'events': 128, 'state': 5, 'alarmsList': 0}
+2022-01-27 16:14:04,061 [App:DEBUG] received notif=('events', Tuple_events(events=128, state=5, alarmsList=0))
+2022-01-27 16:14:04,061 [App:DEBUG] moteEventsString=svcChange
+2022-01-27 16:14:04,061 [App:DEBUG] state=SERVICEGRANTED
+2022-01-27 16:14:04,061 [App:DEBUG] kick fsm try
+2022-01-27 16:14:04,061 [App:DEBUG] kick fsm ok
+2022-01-27 16:14:04,061 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:14:04,077 [App:DEBUG] return from _notifIndication
+2022-01-27 16:14:04,077 [App:DEBUG] state=SERVICEGRANTED
+2022-01-27 16:14:04,077 [App:DEBUG] state=OPENSOCKET
+2022-01-27 16:14:04,077 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['openSocket']
+- fieldsToFill:     {'protocol': 0}
+2022-01-27 16:14:04,077 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            21
+- byteArray:        00
+2022-01-27 16:14:04,077 [SerialConnector:DEBUG] _sendInternal cmdId=21 retry=0 isResponse=False serializedFields=[0]
+2022-01-27 16:14:04,077 [SerialConnector:DEBUG] ---------- pcToMote DATA (0) ---------->
+2022-01-27 16:14:04,077 [Crc:DEBUG] calculating for data=15-01-00-00
+2022-01-27 16:14:04,077 [Crc:DEBUG] fcs=0xf4 b
+2022-01-27 16:14:04,077 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 15 01 00 00
+ - fcs:     f4 0b
+ - valid:   True
+2022-01-27 16:14:04,077 [Crc:DEBUG] calculating for data=15-01-01-00-16
+2022-01-27 16:14:04,093 [Crc:DEBUG] fcs=0xb36e
+2022-01-27 16:14:04,093 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 15 01 01 00 16
+ - fcs:     b3 6e
+ - valid:   True
+2022-01-27 16:14:04,093 [SerialConnector:DEBUG] cmdId=21 length=1 isResponse=True packetId=0 payload=[0, 22]
+2022-01-27 16:14:04,093 [SerialConnector:DEBUG] <--------- pcToMote ACK (0) after 0.016 --------
+2022-01-27 16:14:04,093 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:14:04,093 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               21
+- byteArray:        00-16
+2022-01-27 16:14:04,093 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['openSocket']
+- returnFields:     {'RC': 0, 'socketId': 22}
+2022-01-27 16:14:04,093 [App:DEBUG] state=BINDSOCKET
+2022-01-27 16:14:04,093 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['bindSocket']
+- fieldsToFill:     {'socketId': 22, 'port': 60000}
+2022-01-27 16:14:04,093 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            23
+- byteArray:        16-ea-60
+2022-01-27 16:14:04,093 [SerialConnector:DEBUG] _sendInternal cmdId=23 retry=0 isResponse=False serializedFields=[22, 234, 96]
+2022-01-27 16:14:04,093 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:14:04,093 [Crc:DEBUG] calculating for data=17-03-02-16-ea-60
+2022-01-27 16:14:04,093 [Crc:DEBUG] fcs=0xf7a9
+2022-01-27 16:14:04,093 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 17 03 02 16 ea 60
+ - fcs:     f7 a9
+ - valid:   True
+2022-01-27 16:14:04,108 [Crc:DEBUG] calculating for data=17-00-03-00
+2022-01-27 16:14:04,108 [Crc:DEBUG] fcs=0x3642
+2022-01-27 16:14:04,108 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 17 00 03 00
+ - fcs:     36 42
+ - valid:   True
+2022-01-27 16:14:04,108 [SerialConnector:DEBUG] cmdId=23 length=0 isResponse=True packetId=1 payload=[0]
+2022-01-27 16:14:04,108 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.016 --------
+2022-01-27 16:14:04,108 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:14:04,108 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               23
+- byteArray:        00
+2022-01-27 16:14:04,108 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['bindSocket']
+- returnFields:     {'RC': 0}
+2022-01-27 16:14:04,108 [App:DEBUG] state=READYTOSEND
+2022-01-27 16:14:04,108 [App:DEBUG] kick fsm try
+2022-01-27 16:14:04,108 [App:DEBUG] kick fsm ok
+2022-01-27 16:14:04,108 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:14:04,108 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:14:04,108 [App:DEBUG] state=READYTOSEND
+2022-01-27 16:14:04,155 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:14:26,011 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['sendTo']
+- fieldsToFill:     {'socketId': 22, 'destIP': [255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], 'destPort': 61000, 'serviceType': 0, 'priority': 1, 'packetId': 0, 'payload': [0, 0]}
+2022-01-27 16:14:26,011 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            24
+- byteArray:        16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-00-00-00
+2022-01-27 16:14:26,011 [SerialConnector:DEBUG] _sendInternal cmdId=24 retry=0 isResponse=False serializedFields=[22, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 238, 72, 0, 1, 0, 0, 0, 0]
+2022-01-27 16:14:26,011 [SerialConnector:DEBUG] ---------- pcToMote DATA (0) ---------->
+2022-01-27 16:14:26,011 [Crc:DEBUG] calculating for data=18-19-00-16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-00-00-00
+2022-01-27 16:14:26,011 [Crc:DEBUG] fcs=0x67b1
+2022-01-27 16:14:26,011 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 18 19 00 16 ff 02 00 00 00 00 00 00 00 00 00 00 00 00 00 02 ee 48 00 01 00 00 00 00
+ - fcs:     67 b1
+ - valid:   True
+2022-01-27 16:14:26,027 [Crc:DEBUG] calculating for data=18-00-01-00
+2022-01-27 16:14:26,027 [Crc:DEBUG] fcs=0x7fc3
+2022-01-27 16:14:26,027 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 18 00 01 00
+ - fcs:     7f c3
+ - valid:   True
+2022-01-27 16:14:26,027 [SerialConnector:DEBUG] cmdId=24 length=0 isResponse=True packetId=0 payload=[0]
+2022-01-27 16:14:26,027 [SerialConnector:DEBUG] <--------- pcToMote ACK (0) after 0.016 --------
+2022-01-27 16:14:26,027 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:14:26,027 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               24
+- byteArray:        00
+2022-01-27 16:14:26,027 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['sendTo']
+- returnFields:     {'RC': 0}
+2022-01-27 16:14:26,168 [Crc:DEBUG] calculating for data=25-03-00-00-00-00
+2022-01-27 16:14:26,168 [Crc:DEBUG] fcs=0xa47b
+2022-01-27 16:14:26,168 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 25 03 00 00 00 00
+ - fcs:     a4 7b
+ - valid:   True
+2022-01-27 16:14:26,168 [SerialConnector:DEBUG] cmdId=37 length=3 isResponse=False packetId=0 payload=[0, 0, 0]
+2022-01-27 16:14:26,168 [SerialConnector:DEBUG] <--------- moteToPc DATA (0) ----------
+2022-01-27 16:14:26,168 [SerialConnector:DEBUG] _sendInternal cmdId=37 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:14:26,168 [Crc:DEBUG] calculating for data=25-00-01-00
+2022-01-27 16:14:26,168 [Crc:DEBUG] fcs=0x 2 4
+2022-01-27 16:14:26,168 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 25 00 01 00
+ - fcs:     02 04
+ - valid:   True
+2022-01-27 16:14:26,168 [SerialConnector:DEBUG] ---------- moteToPc ACK (0) after 0.000 ------->
+2022-01-27 16:14:26,168 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:14:26,168 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               37
+- byteArray:        00-00-00
+2022-01-27 16:14:26,168 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['txDone']
+- returnFields:     {'packetId': 0, 'status': 0}
+2022-01-27 16:14:26,168 [App:DEBUG] received notif=('txDone', Tuple_txDone(packetId=0, status=0))
+2022-01-27 16:14:26,168 [App:DEBUG] return from _notifIndication
+2022-01-27 16:25:41,951 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['sendTo']
+- fieldsToFill:     {'socketId': 22, 'destIP': [255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], 'destPort': 61000, 'serviceType': 0, 'priority': 1, 'packetId': 1, 'payload': [0, 0]}
+2022-01-27 16:25:41,951 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            24
+- byteArray:        16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-01-00-00
+2022-01-27 16:25:41,951 [SerialConnector:DEBUG] _sendInternal cmdId=24 retry=0 isResponse=False serializedFields=[22, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 238, 72, 0, 1, 0, 1, 0, 0]
+2022-01-27 16:25:41,951 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:25:41,951 [Crc:DEBUG] calculating for data=18-19-02-16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-01-00-00
+2022-01-27 16:25:41,951 [Crc:DEBUG] fcs=0x a79
+2022-01-27 16:25:41,951 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 18 19 02 16 ff 02 00 00 00 00 00 00 00 00 00 00 00 00 00 02 ee 48 00 01 00 01 00 00
+ - fcs:     0a 79
+ - valid:   True
+2022-01-27 16:25:41,966 [Crc:DEBUG] calculating for data=18-00-03-00
+2022-01-27 16:25:41,966 [Crc:DEBUG] fcs=0xcff0
+2022-01-27 16:25:41,966 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 18 00 03 00
+ - fcs:     cf f0
+ - valid:   True
+2022-01-27 16:25:41,966 [SerialConnector:DEBUG] cmdId=24 length=0 isResponse=True packetId=1 payload=[0]
+2022-01-27 16:25:41,966 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.016 --------
+2022-01-27 16:25:41,966 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:25:41,966 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               24
+- byteArray:        00
+2022-01-27 16:25:41,966 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['sendTo']
+- returnFields:     {'RC': 0}
+2022-01-27 16:25:41,982 [Crc:DEBUG] calculating for data=25-03-02-00-01-00
+2022-01-27 16:25:41,982 [Crc:DEBUG] fcs=0x a5b
+2022-01-27 16:25:41,982 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 25 03 02 00 01 00
+ - fcs:     0a 5b
+ - valid:   True
+2022-01-27 16:25:41,982 [SerialConnector:DEBUG] cmdId=37 length=3 isResponse=False packetId=1 payload=[0, 1, 0]
+2022-01-27 16:25:41,982 [SerialConnector:DEBUG] <--------- moteToPc DATA (1) ----------
+2022-01-27 16:25:41,982 [SerialConnector:DEBUG] _sendInternal cmdId=37 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:25:41,982 [Crc:DEBUG] calculating for data=25-00-03-00
+2022-01-27 16:25:41,997 [Crc:DEBUG] fcs=0xb237
+2022-01-27 16:25:41,997 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 25 00 03 00
+ - fcs:     b2 37
+ - valid:   True
+2022-01-27 16:25:41,997 [SerialConnector:DEBUG] ---------- moteToPc ACK (1) after 0.016 ------->
+2022-01-27 16:25:41,997 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:25:41,997 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               37
+- byteArray:        00-01-00
+2022-01-27 16:25:41,997 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['txDone']
+- returnFields:     {'packetId': 1, 'status': 0}
+2022-01-27 16:25:41,997 [App:DEBUG] received notif=('txDone', Tuple_txDone(packetId=1, status=0))
+2022-01-27 16:25:41,997 [App:DEBUG] return from _notifIndication
+2022-01-27 16:25:50,335 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['sendTo']
+- fieldsToFill:     {'socketId': 22, 'destIP': [255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], 'destPort': 61000, 'serviceType': 0, 'priority': 1, 'packetId': 2, 'payload': [0, 0]}
+2022-01-27 16:25:50,335 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            24
+- byteArray:        16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-02-00-00
+2022-01-27 16:25:50,335 [SerialConnector:DEBUG] _sendInternal cmdId=24 retry=0 isResponse=False serializedFields=[22, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 238, 72, 0, 1, 0, 2, 0, 0]
+2022-01-27 16:25:50,335 [SerialConnector:DEBUG] ---------- pcToMote DATA (0) ---------->
+2022-01-27 16:25:50,335 [Crc:DEBUG] calculating for data=18-19-00-16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-02-00-00
+2022-01-27 16:25:50,335 [Crc:DEBUG] fcs=0xdf 4
+2022-01-27 16:25:50,335 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 18 19 00 16 ff 02 00 00 00 00 00 00 00 00 00 00 00 00 00 02 ee 48 00 01 00 02 00 00
+ - fcs:     df 04
+ - valid:   True
+2022-01-27 16:25:50,335 [Crc:DEBUG] calculating for data=18-00-01-00
+2022-01-27 16:25:50,335 [Crc:DEBUG] fcs=0x7fc3
+2022-01-27 16:25:50,335 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 18 00 01 00
+ - fcs:     7f c3
+ - valid:   True
+2022-01-27 16:25:50,335 [SerialConnector:DEBUG] cmdId=24 length=0 isResponse=True packetId=0 payload=[0]
+2022-01-27 16:25:50,335 [SerialConnector:DEBUG] <--------- pcToMote ACK (0) after 0.000 --------
+2022-01-27 16:25:50,335 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:25:50,335 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               24
+- byteArray:        00
+2022-01-27 16:25:50,335 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['sendTo']
+- returnFields:     {'RC': 0}
+2022-01-27 16:25:51,742 [Crc:DEBUG] calculating for data=25-03-00-00-02-00
+2022-01-27 16:25:51,742 [Crc:DEBUG] fcs=0x1448
+2022-01-27 16:25:51,742 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 25 03 00 00 02 00
+ - fcs:     14 48
+ - valid:   True
+2022-01-27 16:25:51,742 [SerialConnector:DEBUG] cmdId=37 length=3 isResponse=False packetId=0 payload=[0, 2, 0]
+2022-01-27 16:25:51,742 [SerialConnector:DEBUG] <--------- moteToPc DATA (0) ----------
+2022-01-27 16:25:51,742 [SerialConnector:DEBUG] _sendInternal cmdId=37 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:25:51,742 [Crc:DEBUG] calculating for data=25-00-01-00
+2022-01-27 16:25:51,742 [Crc:DEBUG] fcs=0x 2 4
+2022-01-27 16:25:51,742 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 25 00 01 00
+ - fcs:     02 04
+ - valid:   True
+2022-01-27 16:25:51,742 [SerialConnector:DEBUG] ---------- moteToPc ACK (0) after 0.000 ------->
+2022-01-27 16:25:51,742 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:25:51,742 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               37
+- byteArray:        00-02-00
+2022-01-27 16:25:51,742 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['txDone']
+- returnFields:     {'packetId': 2, 'status': 0}
+2022-01-27 16:25:51,742 [App:DEBUG] received notif=('txDone', Tuple_txDone(packetId=2, status=0))
+2022-01-27 16:25:51,742 [App:DEBUG] return from _notifIndication
+2022-01-27 16:26:01,618 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['sendTo']
+- fieldsToFill:     {'socketId': 22, 'destIP': [255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], 'destPort': 61000, 'serviceType': 0, 'priority': 1, 'packetId': 3, 'payload': [0, 0]}
+2022-01-27 16:26:01,618 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            24
+- byteArray:        16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-03-00-00
+2022-01-27 16:26:01,618 [SerialConnector:DEBUG] _sendInternal cmdId=24 retry=0 isResponse=False serializedFields=[22, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 238, 72, 0, 1, 0, 3, 0, 0]
+2022-01-27 16:26:01,618 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:26:01,618 [Crc:DEBUG] calculating for data=18-19-02-16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-03-00-00
+2022-01-27 16:26:01,618 [Crc:DEBUG] fcs=0xb2cc
+2022-01-27 16:26:01,618 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 18 19 02 16 ff 02 00 00 00 00 00 00 00 00 00 00 00 00 00 02 ee 48 00 01 00 03 00 00
+ - fcs:     b2 cc
+ - valid:   True
+2022-01-27 16:26:01,634 [Crc:DEBUG] calculating for data=18-00-03-00
+2022-01-27 16:26:01,634 [Crc:DEBUG] fcs=0xcff0
+2022-01-27 16:26:01,634 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 18 00 03 00
+ - fcs:     cf f0
+ - valid:   True
+2022-01-27 16:26:01,634 [SerialConnector:DEBUG] cmdId=24 length=0 isResponse=True packetId=1 payload=[0]
+2022-01-27 16:26:01,634 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.016 --------
+2022-01-27 16:26:01,634 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:26:01,634 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               24
+- byteArray:        00
+2022-01-27 16:26:01,634 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['sendTo']
+- returnFields:     {'RC': 0}
+2022-01-27 16:26:02,415 [Crc:DEBUG] calculating for data=25-03-02-00-03-00
+2022-01-27 16:26:02,415 [Crc:DEBUG] fcs=0xba68
+2022-01-27 16:26:02,415 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 25 03 02 00 03 00
+ - fcs:     ba 68
+ - valid:   True
+2022-01-27 16:26:02,415 [SerialConnector:DEBUG] cmdId=37 length=3 isResponse=False packetId=1 payload=[0, 3, 0]
+2022-01-27 16:26:02,415 [SerialConnector:DEBUG] <--------- moteToPc DATA (1) ----------
+2022-01-27 16:26:02,415 [SerialConnector:DEBUG] _sendInternal cmdId=37 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:26:02,415 [Crc:DEBUG] calculating for data=25-00-03-00
+2022-01-27 16:26:02,415 [Crc:DEBUG] fcs=0xb237
+2022-01-27 16:26:02,415 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 25 00 03 00
+ - fcs:     b2 37
+ - valid:   True
+2022-01-27 16:26:02,415 [SerialConnector:DEBUG] ---------- moteToPc ACK (1) after 0.000 ------->
+2022-01-27 16:26:02,415 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:26:02,415 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               37
+- byteArray:        00-03-00
+2022-01-27 16:26:02,415 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['txDone']
+- returnFields:     {'packetId': 3, 'status': 0}
+2022-01-27 16:26:02,415 [App:DEBUG] received notif=('txDone', Tuple_txDone(packetId=3, status=0))
+2022-01-27 16:26:02,415 [App:DEBUG] return from _notifIndication
+2022-01-27 16:26:02,890 [Hdlc:INFO] disconnect
+2022-01-27 16:26:02,890 [App:DEBUG] disconnected
+2022-01-27 16:26:02,890 [SerialConnector:INFO] hdlc notification: connection state=False
+2022-01-27 16:26:02,890 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:26:02,890 [App:DEBUG] kick fsm try
+2022-01-27 16:26:02,890 [App:DEBUG] kick fsm ok
+2022-01-27 16:26:02,890 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:26:02,890 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:26:03,030 [Hdlc:INFO] thread ended
+2022-01-27 16:26:43,391 [SerialConnector:INFO] creating object
+2022-01-27 16:26:43,391 [Hdlc:INFO] Creating object
+2022-01-27 16:26:43,406 [Hdlc:INFO] opened port COM10@115200baud
+2022-01-27 16:26:43,406 [SerialConnector:INFO] hdlc notification: connection state=True
+2022-01-27 16:26:43,406 [Hdlc:INFO] thread started
+2022-01-27 16:26:43,406 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getParameter', 'moteInfo']
+- fieldsToFill:     {}
+2022-01-27 16:26:43,406 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            2
+- byteArray:        0c
+2022-01-27 16:26:43,406 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=0 isResponse=False serializedFields=[12]
+2022-01-27 16:26:43,406 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:26:43,406 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:26:43,406 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:26:43,406 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:26:43,422 [Crc:DEBUG] calculating for data=02-12-03-00-0c-01-00-17-0d-00-00-32-dc-61-10-21-01-04-01-00-09-0f
+2022-01-27 16:26:43,422 [Crc:DEBUG] fcs=0xf0e4
+2022-01-27 16:26:43,422 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 02 12 03 00 0c 01 00 17 0d 00 00 32 dc 61 10 21 01 04 01 00 09 0f
+ - fcs:     f0 e4
+ - valid:   True
+2022-01-27 16:26:43,422 [SerialConnector:DEBUG] cmdId=2 length=18 isResponse=True packetId=1 payload=[0, 12, 1, 0, 23, 13, 0, 0, 50, 220, 97, 16, 33, 1, 4, 1, 0, 9, 15]
+2022-01-27 16:26:43,422 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.016 --------
+2022-01-27 16:26:43,422 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:26:43,422 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               2
+- byteArray:        00-0c-01-00-17-0d-00-00-32-dc-61-10-21-01-04-01-00-09-0f
+2022-01-27 16:26:43,422 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['getParameter', 'moteInfo']
+- returnFields:     {'RC': 0, 'apiVersion': 1, 'serialNumber': [0, 23, 13, 0, 0, 50, 220, 97], 'hwModel': 16, 'hwRev': 33, 'swVerMajor': 1, 'swVerMinor': 4, 'swVerPatch': 1, 'swVerBuild': 9, 'bootSwVer': 15}
+2022-01-27 16:26:43,422 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:26:43,422 [App:DEBUG] fsm started
+2022-01-27 16:26:43,422 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:26:43,422 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:26:43,422 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:26:45,438 [App:DEBUG] state=ASSESSMOTESTATE
+2022-01-27 16:26:45,438 [App:DEBUG] kick fsm try
+2022-01-27 16:26:45,438 [App:DEBUG] kick fsm ok
+2022-01-27 16:26:45,438 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:26:45,438 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:26:45,438 [App:DEBUG] state=ASSESSMOTESTATE
+2022-01-27 16:26:45,438 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getParameter', 'moteStatus']
+- fieldsToFill:     {}
+2022-01-27 16:26:45,438 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            2
+- byteArray:        0e
+2022-01-27 16:26:45,438 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=0 isResponse=False serializedFields=[14]
+2022-01-27 16:26:45,438 [SerialConnector:DEBUG] ---------- pcToMote DATA (0) ---------->
+2022-01-27 16:26:45,438 [Crc:DEBUG] calculating for data=02-01-00-0e
+2022-01-27 16:26:45,438 [Crc:DEBUG] fcs=0x a76
+2022-01-27 16:26:45,438 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 00 0e
+ - fcs:     0a 76
+ - valid:   True
+2022-01-27 16:26:45,454 [Crc:DEBUG] calculating for data=02-0b-01-00-0e-05-00-00-00-01-00-00-00-00-00
+2022-01-27 16:26:45,454 [Crc:DEBUG] fcs=0x6414
+2022-01-27 16:26:45,454 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 02 0b 01 00 0e 05 00 00 00 01 00 00 00 00 00
+ - fcs:     64 14
+ - valid:   True
+2022-01-27 16:26:45,454 [SerialConnector:DEBUG] cmdId=2 length=11 isResponse=True packetId=0 payload=[0, 14, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+2022-01-27 16:26:45,454 [SerialConnector:DEBUG] <--------- pcToMote ACK (0) after 0.016 --------
+2022-01-27 16:26:45,454 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:26:45,454 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               2
+- byteArray:        00-0e-05-00-00-00-01-00-00-00-00-00
+2022-01-27 16:26:45,454 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['getParameter', 'moteStatus']
+- returnFields:     {'RC': 0, 'state': 5, 'reserved_0': 0, 'reserved_1': 0, 'numParents': 1, 'alarms': 0, 'reserved_2': 0}
+2022-01-27 16:26:45,454 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getServiceInfo']
+- fieldsToFill:     {'destAddr': 65534, 'type': 0}
+2022-01-27 16:26:45,454 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            18
+- byteArray:        ff-fe-00
+2022-01-27 16:26:45,454 [SerialConnector:DEBUG] _sendInternal cmdId=18 retry=0 isResponse=False serializedFields=[255, 254, 0]
+2022-01-27 16:26:45,454 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:26:45,454 [Crc:DEBUG] calculating for data=12-03-02-ff-fe-00
+2022-01-27 16:26:45,454 [Crc:DEBUG] fcs=0x38b9
+2022-01-27 16:26:45,454 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 12 03 02 ff fe 00
+ - fcs:     38 b9
+ - valid:   True
+2022-01-27 16:26:45,479 [Crc:DEBUG] calculating for data=12-08-03-00-ff-fe-00-00-00-00-13-0b
+2022-01-27 16:26:45,479 [Crc:DEBUG] fcs=0x d5d
+2022-01-27 16:26:45,479 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 12 08 03 00 ff fe 00 00 00 00 13 0b
+ - fcs:     0d 5d
+ - valid:   True
+2022-01-27 16:26:45,479 [SerialConnector:DEBUG] cmdId=18 length=8 isResponse=True packetId=1 payload=[0, 255, 254, 0, 0, 0, 0, 19, 11]
+2022-01-27 16:26:45,479 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.025 --------
+2022-01-27 16:26:45,479 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:26:45,479 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               18
+- byteArray:        00-ff-fe-00-00-00-00-13-0b
+2022-01-27 16:26:45,479 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['getServiceInfo']
+- returnFields:     {'RC': 0, 'destAddr': [255, 254], 'type': 0, 'state': 0, 'value': 4875}
+2022-01-27 16:26:45,479 [App:DEBUG] state=READYTOSEND
+2022-01-27 16:26:45,479 [App:DEBUG] kick fsm try
+2022-01-27 16:26:45,479 [App:DEBUG] kick fsm ok
+2022-01-27 16:26:45,479 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:26:45,479 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:26:45,479 [App:DEBUG] state=READYTOSEND
+2022-01-27 16:26:45,495 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:28:59,017 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['sendTo']
+- fieldsToFill:     {'socketId': 22, 'destIP': [255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], 'destPort': 61000, 'serviceType': 0, 'priority': 1, 'packetId': 0, 'payload': [0, 0]}
+2022-01-27 16:28:59,017 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            24
+- byteArray:        16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-00-00-00
+2022-01-27 16:28:59,017 [SerialConnector:DEBUG] _sendInternal cmdId=24 retry=0 isResponse=False serializedFields=[22, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 238, 72, 0, 1, 0, 0, 0, 0]
+2022-01-27 16:28:59,017 [SerialConnector:DEBUG] ---------- pcToMote DATA (0) ---------->
+2022-01-27 16:28:59,017 [Crc:DEBUG] calculating for data=18-19-00-16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-00-00-00
+2022-01-27 16:28:59,017 [Crc:DEBUG] fcs=0x67b1
+2022-01-27 16:28:59,017 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 18 19 00 16 ff 02 00 00 00 00 00 00 00 00 00 00 00 00 00 02 ee 48 00 01 00 00 00 00
+ - fcs:     67 b1
+ - valid:   True
+2022-01-27 16:28:59,017 [Crc:DEBUG] calculating for data=18-00-01-00
+2022-01-27 16:28:59,017 [Crc:DEBUG] fcs=0x7fc3
+2022-01-27 16:28:59,017 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 18 00 01 00
+ - fcs:     7f c3
+ - valid:   True
+2022-01-27 16:28:59,033 [SerialConnector:DEBUG] cmdId=24 length=0 isResponse=True packetId=0 payload=[0]
+2022-01-27 16:28:59,033 [SerialConnector:DEBUG] <--------- pcToMote ACK (0) after 0.016 --------
+2022-01-27 16:28:59,033 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:28:59,033 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               24
+- byteArray:        00
+2022-01-27 16:28:59,033 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['sendTo']
+- returnFields:     {'RC': 0}
+2022-01-27 16:29:01,833 [Crc:DEBUG] calculating for data=25-03-00-00-00-00
+2022-01-27 16:29:01,833 [Crc:DEBUG] fcs=0xa47b
+2022-01-27 16:29:01,849 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 25 03 00 00 00 00
+ - fcs:     a4 7b
+ - valid:   True
+2022-01-27 16:29:01,849 [SerialConnector:DEBUG] cmdId=37 length=3 isResponse=False packetId=0 payload=[0, 0, 0]
+2022-01-27 16:29:01,849 [SerialConnector:DEBUG] <--------- moteToPc DATA (0) ----------
+2022-01-27 16:29:01,849 [SerialConnector:DEBUG] _sendInternal cmdId=37 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:29:01,849 [Crc:DEBUG] calculating for data=25-00-01-00
+2022-01-27 16:29:01,849 [Crc:DEBUG] fcs=0x 2 4
+2022-01-27 16:29:01,849 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 25 00 01 00
+ - fcs:     02 04
+ - valid:   True
+2022-01-27 16:29:01,849 [SerialConnector:DEBUG] ---------- moteToPc ACK (0) after 0.000 ------->
+2022-01-27 16:29:01,849 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:29:01,849 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               37
+- byteArray:        00-00-00
+2022-01-27 16:29:01,849 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['txDone']
+- returnFields:     {'packetId': 0, 'status': 0}
+2022-01-27 16:29:01,849 [App:DEBUG] received notif=('txDone', Tuple_txDone(packetId=0, status=0))
+2022-01-27 16:29:01,849 [App:DEBUG] return from _notifIndication
+2022-01-27 16:29:18,999 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['sendTo']
+- fieldsToFill:     {'socketId': 22, 'destIP': [255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], 'destPort': 61000, 'serviceType': 0, 'priority': 1, 'packetId': 1, 'payload': [0, 0]}
+2022-01-27 16:29:18,999 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            24
+- byteArray:        16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-01-00-00
+2022-01-27 16:29:18,999 [SerialConnector:DEBUG] _sendInternal cmdId=24 retry=0 isResponse=False serializedFields=[22, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 238, 72, 0, 1, 0, 1, 0, 0]
+2022-01-27 16:29:18,999 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:29:18,999 [Crc:DEBUG] calculating for data=18-19-02-16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-01-00-00
+2022-01-27 16:29:18,999 [Crc:DEBUG] fcs=0x a79
+2022-01-27 16:29:18,999 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 18 19 02 16 ff 02 00 00 00 00 00 00 00 00 00 00 00 00 00 02 ee 48 00 01 00 01 00 00
+ - fcs:     0a 79
+ - valid:   True
+2022-01-27 16:29:19,015 [Crc:DEBUG] calculating for data=18-00-03-00
+2022-01-27 16:29:19,015 [Crc:DEBUG] fcs=0xcff0
+2022-01-27 16:29:19,015 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 18 00 03 00
+ - fcs:     cf f0
+ - valid:   True
+2022-01-27 16:29:19,015 [SerialConnector:DEBUG] cmdId=24 length=0 isResponse=True packetId=1 payload=[0]
+2022-01-27 16:29:19,015 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.016 --------
+2022-01-27 16:29:19,015 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:29:19,015 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               24
+- byteArray:        00
+2022-01-27 16:29:19,015 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['sendTo']
+- returnFields:     {'RC': 0}
+2022-01-27 16:29:29,147 [Crc:DEBUG] calculating for data=25-03-02-00-01-00
+2022-01-27 16:29:29,147 [Crc:DEBUG] fcs=0x a5b
+2022-01-27 16:29:29,147 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 25 03 02 00 01 00
+ - fcs:     0a 5b
+ - valid:   True
+2022-01-27 16:29:29,147 [SerialConnector:DEBUG] cmdId=37 length=3 isResponse=False packetId=1 payload=[0, 1, 0]
+2022-01-27 16:29:29,147 [SerialConnector:DEBUG] <--------- moteToPc DATA (1) ----------
+2022-01-27 16:29:29,147 [SerialConnector:DEBUG] _sendInternal cmdId=37 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:29:29,147 [Crc:DEBUG] calculating for data=25-00-03-00
+2022-01-27 16:29:29,147 [Crc:DEBUG] fcs=0xb237
+2022-01-27 16:29:29,147 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 25 00 03 00
+ - fcs:     b2 37
+ - valid:   True
+2022-01-27 16:29:29,147 [SerialConnector:DEBUG] ---------- moteToPc ACK (1) after 0.000 ------->
+2022-01-27 16:29:29,147 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:29:29,147 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               37
+- byteArray:        00-01-00
+2022-01-27 16:29:29,147 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['txDone']
+- returnFields:     {'packetId': 1, 'status': 0}
+2022-01-27 16:29:29,147 [App:DEBUG] received notif=('txDone', Tuple_txDone(packetId=1, status=0))
+2022-01-27 16:29:29,147 [App:DEBUG] return from _notifIndication
+2022-01-27 16:31:09,577 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['sendTo']
+- fieldsToFill:     {'socketId': 22, 'destIP': [255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], 'destPort': 61000, 'serviceType': 0, 'priority': 1, 'packetId': 2, 'payload': [0, 0]}
+2022-01-27 16:31:09,577 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            24
+- byteArray:        16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-02-00-00
+2022-01-27 16:31:09,577 [SerialConnector:DEBUG] _sendInternal cmdId=24 retry=0 isResponse=False serializedFields=[22, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 238, 72, 0, 1, 0, 2, 0, 0]
+2022-01-27 16:31:09,577 [SerialConnector:DEBUG] ---------- pcToMote DATA (0) ---------->
+2022-01-27 16:31:09,577 [Crc:DEBUG] calculating for data=18-19-00-16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-02-00-00
+2022-01-27 16:31:09,577 [Crc:DEBUG] fcs=0xdf 4
+2022-01-27 16:31:09,577 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 18 19 00 16 ff 02 00 00 00 00 00 00 00 00 00 00 00 00 00 02 ee 48 00 01 00 02 00 00
+ - fcs:     df 04
+ - valid:   True
+2022-01-27 16:31:09,592 [Crc:DEBUG] calculating for data=18-00-01-00
+2022-01-27 16:31:09,592 [Crc:DEBUG] fcs=0x7fc3
+2022-01-27 16:31:09,592 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 18 00 01 00
+ - fcs:     7f c3
+ - valid:   True
+2022-01-27 16:31:09,592 [SerialConnector:DEBUG] cmdId=24 length=0 isResponse=True packetId=0 payload=[0]
+2022-01-27 16:31:09,592 [SerialConnector:DEBUG] <--------- pcToMote ACK (0) after 0.016 --------
+2022-01-27 16:31:09,592 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:31:09,592 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               24
+- byteArray:        00
+2022-01-27 16:31:09,592 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['sendTo']
+- returnFields:     {'RC': 0}
+2022-01-27 16:31:09,639 [Crc:DEBUG] calculating for data=25-03-00-00-02-00
+2022-01-27 16:31:09,639 [Crc:DEBUG] fcs=0x1448
+2022-01-27 16:31:09,639 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 25 03 00 00 02 00
+ - fcs:     14 48
+ - valid:   True
+2022-01-27 16:31:09,639 [SerialConnector:DEBUG] cmdId=37 length=3 isResponse=False packetId=0 payload=[0, 2, 0]
+2022-01-27 16:31:09,639 [SerialConnector:DEBUG] <--------- moteToPc DATA (0) ----------
+2022-01-27 16:31:09,639 [SerialConnector:DEBUG] _sendInternal cmdId=37 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:31:09,639 [Crc:DEBUG] calculating for data=25-00-01-00
+2022-01-27 16:31:09,639 [Crc:DEBUG] fcs=0x 2 4
+2022-01-27 16:31:09,639 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 25 00 01 00
+ - fcs:     02 04
+ - valid:   True
+2022-01-27 16:31:09,639 [SerialConnector:DEBUG] ---------- moteToPc ACK (0) after 0.000 ------->
+2022-01-27 16:31:09,639 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:31:09,639 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               37
+- byteArray:        00-02-00
+2022-01-27 16:31:09,639 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['txDone']
+- returnFields:     {'packetId': 2, 'status': 0}
+2022-01-27 16:31:09,639 [App:DEBUG] received notif=('txDone', Tuple_txDone(packetId=2, status=0))
+2022-01-27 16:31:09,639 [App:DEBUG] return from _notifIndication
+2022-01-27 16:31:16,701 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['sendTo']
+- fieldsToFill:     {'socketId': 22, 'destIP': [255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], 'destPort': 61000, 'serviceType': 0, 'priority': 1, 'packetId': 3, 'payload': [0, 0]}
+2022-01-27 16:31:16,701 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            24
+- byteArray:        16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-03-00-00
+2022-01-27 16:31:16,701 [SerialConnector:DEBUG] _sendInternal cmdId=24 retry=0 isResponse=False serializedFields=[22, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 238, 72, 0, 1, 0, 3, 0, 0]
+2022-01-27 16:31:16,701 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:31:16,701 [Crc:DEBUG] calculating for data=18-19-02-16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-03-00-00
+2022-01-27 16:31:16,701 [Crc:DEBUG] fcs=0xb2cc
+2022-01-27 16:31:16,717 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 18 19 02 16 ff 02 00 00 00 00 00 00 00 00 00 00 00 00 00 02 ee 48 00 01 00 03 00 00
+ - fcs:     b2 cc
+ - valid:   True
+2022-01-27 16:31:16,717 [Crc:DEBUG] calculating for data=18-00-03-00
+2022-01-27 16:31:16,717 [Crc:DEBUG] fcs=0xcff0
+2022-01-27 16:31:16,717 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 18 00 03 00
+ - fcs:     cf f0
+ - valid:   True
+2022-01-27 16:31:16,717 [SerialConnector:DEBUG] cmdId=24 length=0 isResponse=True packetId=1 payload=[0]
+2022-01-27 16:31:16,717 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.016 --------
+2022-01-27 16:31:16,717 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:31:16,717 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               24
+- byteArray:        00
+2022-01-27 16:31:16,717 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['sendTo']
+- returnFields:     {'RC': 0}
+2022-01-27 16:31:22,267 [Crc:DEBUG] calculating for data=25-03-02-00-03-00
+2022-01-27 16:31:22,267 [Crc:DEBUG] fcs=0xba68
+2022-01-27 16:31:22,267 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 25 03 02 00 03 00
+ - fcs:     ba 68
+ - valid:   True
+2022-01-27 16:31:22,267 [SerialConnector:DEBUG] cmdId=37 length=3 isResponse=False packetId=1 payload=[0, 3, 0]
+2022-01-27 16:31:22,267 [SerialConnector:DEBUG] <--------- moteToPc DATA (1) ----------
+2022-01-27 16:31:22,267 [SerialConnector:DEBUG] _sendInternal cmdId=37 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:31:22,267 [Crc:DEBUG] calculating for data=25-00-03-00
+2022-01-27 16:31:22,267 [Crc:DEBUG] fcs=0xb237
+2022-01-27 16:31:22,267 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 25 00 03 00
+ - fcs:     b2 37
+ - valid:   True
+2022-01-27 16:31:22,267 [SerialConnector:DEBUG] ---------- moteToPc ACK (1) after 0.000 ------->
+2022-01-27 16:31:22,267 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:31:22,267 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               37
+- byteArray:        00-03-00
+2022-01-27 16:31:22,267 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['txDone']
+- returnFields:     {'packetId': 3, 'status': 0}
+2022-01-27 16:31:22,267 [App:DEBUG] received notif=('txDone', Tuple_txDone(packetId=3, status=0))
+2022-01-27 16:31:22,267 [App:DEBUG] return from _notifIndication
+2022-01-27 16:32:09,186 [Hdlc:INFO] disconnect
+2022-01-27 16:32:09,186 [App:DEBUG] disconnected
+2022-01-27 16:32:09,186 [SerialConnector:INFO] hdlc notification: connection state=False
+2022-01-27 16:32:09,186 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:32:09,186 [App:DEBUG] kick fsm try
+2022-01-27 16:32:09,186 [App:DEBUG] kick fsm ok
+2022-01-27 16:32:09,186 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:32:09,186 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:32:09,295 [Hdlc:INFO] thread ended
+2022-01-27 16:32:11,843 [SerialConnector:ERROR] not connected
+2022-01-27 16:34:58,398 [SerialConnector:INFO] creating object
+2022-01-27 16:34:58,398 [Hdlc:INFO] Creating object
+2022-01-27 16:34:58,414 [Hdlc:INFO] opened port COM10@115200baud
+2022-01-27 16:34:58,414 [SerialConnector:INFO] hdlc notification: connection state=True
+2022-01-27 16:34:58,414 [Hdlc:INFO] thread started
+2022-01-27 16:34:58,414 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getParameter', 'moteInfo']
+- fieldsToFill:     {}
+2022-01-27 16:34:58,414 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            2
+- byteArray:        0c
+2022-01-27 16:34:58,414 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=0 isResponse=False serializedFields=[12]
+2022-01-27 16:34:58,414 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:34:58,414 [Crc:DEBUG] calculating for data=02-01-0a-0c
+2022-01-27 16:34:58,414 [Crc:DEBUG] fcs=0x68a8
+2022-01-27 16:34:58,414 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 0a 0c
+ - fcs:     68 a8
+ - valid:   True
+2022-01-27 16:34:58,429 [Crc:DEBUG] calculating for data=02-12-03-00-0c-01-00-17-0d-00-00-32-dc-61-10-21-01-04-01-00-09-0f
+2022-01-27 16:34:58,429 [Crc:DEBUG] fcs=0xf0e4
+2022-01-27 16:34:58,429 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 02 12 03 00 0c 01 00 17 0d 00 00 32 dc 61 10 21 01 04 01 00 09 0f
+ - fcs:     f0 e4
+ - valid:   True
+2022-01-27 16:34:58,429 [SerialConnector:DEBUG] cmdId=2 length=18 isResponse=True packetId=1 payload=[0, 12, 1, 0, 23, 13, 0, 0, 50, 220, 97, 16, 33, 1, 4, 1, 0, 9, 15]
+2022-01-27 16:34:58,429 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.016 --------
+2022-01-27 16:34:58,429 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:34:58,429 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               2
+- byteArray:        00-0c-01-00-17-0d-00-00-32-dc-61-10-21-01-04-01-00-09-0f
+2022-01-27 16:34:58,429 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['getParameter', 'moteInfo']
+- returnFields:     {'RC': 0, 'apiVersion': 1, 'serialNumber': [0, 23, 13, 0, 0, 50, 220, 97], 'hwModel': 16, 'hwRev': 33, 'swVerMajor': 1, 'swVerMinor': 4, 'swVerPatch': 1, 'swVerBuild': 9, 'bootSwVer': 15}
+2022-01-27 16:34:58,429 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:34:58,429 [App:DEBUG] fsm started
+2022-01-27 16:34:58,429 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:34:58,429 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:34:58,429 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:35:00,436 [App:DEBUG] state=ASSESSMOTESTATE
+2022-01-27 16:35:00,436 [App:DEBUG] kick fsm try
+2022-01-27 16:35:00,436 [App:DEBUG] kick fsm ok
+2022-01-27 16:35:00,436 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:35:00,436 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:35:00,436 [App:DEBUG] state=ASSESSMOTESTATE
+2022-01-27 16:35:00,436 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getParameter', 'moteStatus']
+- fieldsToFill:     {}
+2022-01-27 16:35:00,436 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            2
+- byteArray:        0e
+2022-01-27 16:35:00,436 [SerialConnector:DEBUG] _sendInternal cmdId=2 retry=0 isResponse=False serializedFields=[14]
+2022-01-27 16:35:00,436 [SerialConnector:DEBUG] ---------- pcToMote DATA (0) ---------->
+2022-01-27 16:35:00,436 [Crc:DEBUG] calculating for data=02-01-00-0e
+2022-01-27 16:35:00,436 [Crc:DEBUG] fcs=0x a76
+2022-01-27 16:35:00,436 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 02 01 00 0e
+ - fcs:     0a 76
+ - valid:   True
+2022-01-27 16:35:00,452 [Crc:DEBUG] calculating for data=02-0b-01-00-0e-05-00-00-00-01-00-00-00-00-00
+2022-01-27 16:35:00,452 [Crc:DEBUG] fcs=0x6414
+2022-01-27 16:35:00,452 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 02 0b 01 00 0e 05 00 00 00 01 00 00 00 00 00
+ - fcs:     64 14
+ - valid:   True
+2022-01-27 16:35:00,452 [SerialConnector:DEBUG] cmdId=2 length=11 isResponse=True packetId=0 payload=[0, 14, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+2022-01-27 16:35:00,452 [SerialConnector:DEBUG] <--------- pcToMote ACK (0) after 0.016 --------
+2022-01-27 16:35:00,452 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:35:00,452 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               2
+- byteArray:        00-0e-05-00-00-00-01-00-00-00-00-00
+2022-01-27 16:35:00,452 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['getParameter', 'moteStatus']
+- returnFields:     {'RC': 0, 'state': 5, 'reserved_0': 0, 'reserved_1': 0, 'numParents': 1, 'alarms': 0, 'reserved_2': 0}
+2022-01-27 16:35:00,452 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['getServiceInfo']
+- fieldsToFill:     {'destAddr': 65534, 'type': 0}
+2022-01-27 16:35:00,452 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            18
+- byteArray:        ff-fe-00
+2022-01-27 16:35:00,452 [SerialConnector:DEBUG] _sendInternal cmdId=18 retry=0 isResponse=False serializedFields=[255, 254, 0]
+2022-01-27 16:35:00,452 [SerialConnector:DEBUG] ---------- pcToMote DATA (1) ---------->
+2022-01-27 16:35:00,452 [Crc:DEBUG] calculating for data=12-03-02-ff-fe-00
+2022-01-27 16:35:00,452 [Crc:DEBUG] fcs=0x38b9
+2022-01-27 16:35:00,452 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 12 03 02 ff fe 00
+ - fcs:     38 b9
+ - valid:   True
+2022-01-27 16:35:00,483 [Crc:DEBUG] calculating for data=12-08-03-00-ff-fe-00-00-00-00-13-0b
+2022-01-27 16:35:00,483 [Crc:DEBUG] fcs=0x d5d
+2022-01-27 16:35:00,483 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 12 08 03 00 ff fe 00 00 00 00 13 0b
+ - fcs:     0d 5d
+ - valid:   True
+2022-01-27 16:35:00,483 [SerialConnector:DEBUG] cmdId=18 length=8 isResponse=True packetId=1 payload=[0, 255, 254, 0, 0, 0, 0, 19, 11]
+2022-01-27 16:35:00,483 [SerialConnector:DEBUG] <--------- pcToMote ACK (1) after 0.031 --------
+2022-01-27 16:35:00,483 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:35:00,483 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               18
+- byteArray:        00-ff-fe-00-00-00-00-13-0b
+2022-01-27 16:35:00,483 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['getServiceInfo']
+- returnFields:     {'RC': 0, 'destAddr': [255, 254], 'type': 0, 'state': 0, 'value': 4875}
+2022-01-27 16:35:00,483 [App:DEBUG] state=READYTOSEND
+2022-01-27 16:35:00,483 [App:DEBUG] kick fsm try
+2022-01-27 16:35:00,483 [App:DEBUG] kick fsm ok
+2022-01-27 16:35:00,483 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:35:00,483 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:35:00,483 [App:DEBUG] state=READYTOSEND
+2022-01-27 16:35:00,499 [App:DEBUG] ============================== FSM STOP
+2022-01-27 16:36:17,559 [ByteArraySerializer:DEBUG] serialize ...
+- commandArray:     ['sendTo']
+- fieldsToFill:     {'socketId': 22, 'destIP': [255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], 'destPort': 61000, 'serviceType': 0, 'priority': 1, 'packetId': 0, 'payload': [163, 27]}
+2022-01-27 16:36:17,559 [ByteArraySerializer:DEBUG] ... serialize into
+- cmdId:            24
+- byteArray:        16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-00-a3-1b
+2022-01-27 16:36:17,559 [SerialConnector:DEBUG] _sendInternal cmdId=24 retry=0 isResponse=False serializedFields=[22, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 238, 72, 0, 1, 0, 0, 163, 27]
+2022-01-27 16:36:17,559 [SerialConnector:DEBUG] ---------- pcToMote DATA (0) ---------->
+2022-01-27 16:36:17,559 [Crc:DEBUG] calculating for data=18-19-00-16-ff-02-00-00-00-00-00-00-00-00-00-00-00-00-00-02-ee-48-00-01-00-00-a3-1b
+2022-01-27 16:36:17,559 [Crc:DEBUG] fcs=0xa29a
+2022-01-27 16:36:17,559 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 18 19 00 16 ff 02 00 00 00 00 00 00 00 00 00 00 00 00 00 02 ee 48 00 01 00 00 a3 1b
+ - fcs:     a2 9a
+ - valid:   True
+2022-01-27 16:36:17,574 [Crc:DEBUG] calculating for data=18-00-01-00
+2022-01-27 16:36:17,574 [Crc:DEBUG] fcs=0x7fc3
+2022-01-27 16:36:17,574 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 18 00 01 00
+ - fcs:     7f c3
+ - valid:   True
+2022-01-27 16:36:17,574 [SerialConnector:DEBUG] cmdId=24 length=0 isResponse=True packetId=0 payload=[0]
+2022-01-27 16:36:17,574 [SerialConnector:DEBUG] <--------- pcToMote ACK (0) after 0.016 --------
+2022-01-27 16:36:17,574 [SerialConnector:DEBUG] no ack needed
+2022-01-27 16:36:17,574 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             command
+- id:               24
+- byteArray:        00
+2022-01-27 16:36:17,574 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['sendTo']
+- returnFields:     {'RC': 0}
+2022-01-27 16:36:20,653 [Crc:DEBUG] calculating for data=25-03-00-00-00-00
+2022-01-27 16:36:20,653 [Crc:DEBUG] fcs=0xa47b
+2022-01-27 16:36:20,653 [Hdlc:DEBUG] 
+receivedFrame:
+ - payload: 25 03 00 00 00 00
+ - fcs:     a4 7b
+ - valid:   True
+2022-01-27 16:36:20,653 [SerialConnector:DEBUG] cmdId=37 length=3 isResponse=False packetId=0 payload=[0, 0, 0]
+2022-01-27 16:36:20,653 [SerialConnector:DEBUG] <--------- moteToPc DATA (0) ----------
+2022-01-27 16:36:20,653 [SerialConnector:DEBUG] _sendInternal cmdId=37 retry=0 isResponse=True serializedFields=[]
+2022-01-27 16:36:20,669 [Crc:DEBUG] calculating for data=25-00-01-00
+2022-01-27 16:36:20,669 [Crc:DEBUG] fcs=0x 2 4
+2022-01-27 16:36:20,669 [Hdlc:DEBUG] 
+packetToSend:
+ - payload: 25 00 01 00
+ - fcs:     02 04
+ - valid:   True
+2022-01-27 16:36:20,669 [SerialConnector:DEBUG] ---------- moteToPc ACK (0) after 0.016 ------->
+2022-01-27 16:36:20,669 [SerialConnector:DEBUG] ack sent
+2022-01-27 16:36:20,669 [ByteArraySerializer:DEBUG] deserialize ...
+- type:             notification
+- id:               37
+- byteArray:        00-00-00
+2022-01-27 16:36:20,669 [ByteArraySerializer:DEBUG] ... deserialized into
+- nameArray:        ['txDone']
+- returnFields:     {'packetId': 0, 'status': 0}
+2022-01-27 16:36:20,669 [App:DEBUG] received notif=('txDone', Tuple_txDone(packetId=0, status=0))
+2022-01-27 16:36:20,669 [App:DEBUG] return from _notifIndication
+2022-01-27 16:58:54,611 [Hdlc:INFO] disconnect
+2022-01-27 16:58:54,611 [App:DEBUG] disconnected
+2022-01-27 16:58:54,611 [SerialConnector:INFO] hdlc notification: connection state=False
+2022-01-27 16:58:54,611 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:58:54,611 [App:DEBUG] kick fsm try
+2022-01-27 16:58:54,611 [App:DEBUG] kick fsm ok
+2022-01-27 16:58:54,611 [App:DEBUG] 
+
+============================== FSM START
+2022-01-27 16:58:54,611 [App:DEBUG] state=WAITFORINITIALNOTIF
+2022-01-27 16:58:54,736 [Hdlc:INFO] thread ended

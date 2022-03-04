@@ -1,0 +1,7 @@
+mspdebug.name=mspdebug
+mspdebug.protocol=rf2500
+mspdebug.program.tool=mspdebug
+
+dslite.name=dslite
+dslite.protocol=dslite
+dslite.program.tool=dslite
