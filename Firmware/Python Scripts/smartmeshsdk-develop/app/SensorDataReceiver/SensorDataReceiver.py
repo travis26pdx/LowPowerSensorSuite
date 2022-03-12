@@ -251,10 +251,10 @@ def simple_data_Logging(mac, payload):
     #                             str([samples[0],samples[1],samples[2],samples[3],samples[4],samples[5]]) + ' ...')
 
     print ('sensor data received --> ' + logname +  '            Data: ' + \
-                                 str(samples[0]) + ' ...')
-                                 
+                                 str(samples))
+
     # logging
-    logFile = open(Data_Loc + logname, "a+")
+    logFile = open(Data_Loc + logname, "r+") #changed "a+" to "r+"
     UpdateDate(logname,logFile)
     currentDTandTM = datetime.datetime.now()
     logFile.write('\n{TIME}, {SAMPLES}'.format(
