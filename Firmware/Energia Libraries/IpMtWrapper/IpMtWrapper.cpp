@@ -480,8 +480,8 @@ void IpMtWrapper::api_requestService_reply() {
 
 void IpMtWrapper::api_sendTo(void) {
    dn_err_t err;
-   uint16_t dataVal;
-   uint8_t  payload[2];
+   uint16_t dataVal[3];
+   uint8_t  payload[6];
    uint8_t  lenWritten;
    
    // record time
@@ -495,9 +495,15 @@ void IpMtWrapper::api_sendTo(void) {
    fsm_setCallback(&IpMtWrapper::api_sendTo_reply);
    
    // create payload
-   app_vars.dataGenerator(&dataVal);
-   dn_write_uint16_t(payload, dataVal);
-   
+   app_vars.dataGenerator(dataVal);
+   //dn_write_uint16_t(payload, dataVal);
+   payload[0] = (dataVal[0] >> 8) & 0xff;
+   payload[1] = (dataVal[0] >> 0) & 0xff;
+   payload[2] = (dataVal[1] >> 8) & 0xff;
+   payload[3] = (dataVal[1] >> 0) & 0xff;
+   payload[4] = (dataVal[2] >> 8) & 0xff;
+   payload[5] = (dataVal[2] >> 0) & 0xff;
+
    // issue function
    err = dn_ipmt_sendTo(
       app_vars.socketId,                                   // socketId
@@ -515,7 +521,11 @@ void IpMtWrapper::api_sendTo(void) {
    Serial.println(err);
    
    Serial.print("INFO:     sending value: ");
-   Serial.println(dataVal);
+   Serial.print(dataVal[0]);
+   Serial.print(", ");
+   Serial.print(dataVal[1]);
+   Serial.print(", ");
+   Serial.println(dataVal[2]);
    
    // schedule timeout event
    fsm_scheduleEvent(SERIAL_RESPONSE_TIMEOUT, &IpMtWrapper::api_response_timeout);
