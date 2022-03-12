@@ -5,8 +5,12 @@
 #define BytesToRead         4                         //Lens of Read Bytes 
 #define SampleNums          1                        //Total Sample Nums
 #define SampleInterval      100                       //Ms
-#define MeasureInterval     0.1 * 100000               //Measure every 10sec
-unsigned long MeasureTime = 0;                        //Interval Between Last SampleNums And Now SampleNums
+#define MeasureIntervalTemp     0.1 * 100000          //Measure every 10sec
+#define MeasureIntervalHumi     0.2 * 100000          //Measure every 20sec
+#define MeasureIntervalN2O      0.3 * 100000          //Measure every 30sec
+unsigned long MeasureTimeTemp = 0;                    //Interval Between Last SampleNums And Now SampleNums
+unsigned long MeasureTimeHumi = 0;
+unsigned long MeasureTimeN2O = 0;
 unsigned long SampleTime = 0;                         //Sample Interval
 int SampleCounts = 0;                                 //Current Sample Counter
 /* Humiture */
@@ -17,28 +21,28 @@ float TempSum = 0;
 float HumiAvg = 0;                                    //Calculate Average According to Humi Sum 
 float TempAvg = 0;
 float Humi,Temp;                                    //Humi (%) and Temp (C)
-int tempHumiCollect, tempTransfer, humiTransfer;
 
 IpMtWrapper       ipmtwrapper;
 
 //============================== data generator ==================================
 void generateData(uint16_t* returnVal) {
- if (tempHumiCollect) {                                              //If tempHumiCollect = 1 then call function to get temp and humid data from sensor
-     GetHIHSensor();
-     tempHumiCollect = 0;                                            //Stop collection of temp and humid
- }
- if (tempTransfer) {                                                 //If temp data is ready to be transferred via smartmesh
-     Serial.print("Temp: ");Serial.print(Temp);Serial.println("C");
-     returnVal[0] = (int)(Temp * 100);                               //Temp is a float value so multiply by 100 to get rid of decimal points and also cast float as int
-     tempTransfer = 0;                                               //Stop transfer of temp data
-     return;
- }
- if (humiTransfer) {                                                 //If humid data is ready to be transferred via smartmesh
-     Serial.print("Humi: ");Serial.print(Humi);Serial.println("%");
-     returnVal[0] = (int)(Humi * 100);                               //Humid is a float value so multiply by 100 to get rid of decimal points and also cast float as int
-     humiTransfer = 0;                                               //Stop transfer of humid data
- }
- tempHumiCollect = 1;                                                //Value to start collecting temp and humid data
+     if (millis() - MeasureTimeTemp >= MeasureIntervalTemp) {    //Measure temperature every 10 seconds
+         MeasureTimeTemp = millis();                             //Reset Timer
+         GetHIHSensor();
+         returnVal[0] = (int)(Temp * 100);
+         returnVal[1] = 0;
+         returnVal[2] = 0;
+     }
+     if (millis() - MeasureTimeHumi >= MeasureIntervalHumi) {    //Measure humidity every 20 seconds
+         MeasureTimeHumi = millis();                             //Reset Timer
+         GetHIHSensor();
+         returnVal[1] = (int)(Humi * 100);
+         returnVal[2] = 0;
+     }
+     if (millis() - MeasureTimeN2O >= MeasureIntervalN2O) {      //Measure N2O every 30 seconds
+         MeasureTimeN2O = millis();                              //Reset Timer
+         returnVal[2] = 1000;                                    //Placeholder value for N2O
+     }
 }
 
 void setup() {                                        //put your setup code here, to run once:
@@ -46,22 +50,16 @@ void setup() {                                        //put your setup code here
       60000,                           // srcPort
       (uint8_t*)ipv6Addr_manager,      // destAddr
       61000,                           // destPort
-      300,                           // dataPeriod (ms)
+      10000,                           // dataPeriod (ms)
       generateData                     // dataGenerator
   );
   Serial.begin(9600);                                //Init Serial
   Wire.begin();                                       //I2C Begin
-  //Serial.println("System Ready!");
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-    ipmtwrapper.loop();
-  //if(millis() - MeasureTime >= MeasureInterval){      //Conduct a new round of sampling Timer
-  //  MeasureTime = millis();                           //Reset Timer
-  //  SampleCounts = 0;                                 //Reset SampleCounter
-  //  GetHIHSensor();
-  //}
+  ipmtwrapper.loop();
 }
 
 
@@ -97,8 +95,6 @@ void GetHIHSensor(){
   /* Add Current Values To Array */
   HumiVals[SampleCounts] = Humi;
   TempVals[SampleCounts] = Temp;
-  tempTransfer = 1;                                   //tempTransfer is set to 1 since temp data is ready to be transferred via smartmesh
-  humiTransfer = 1;                                   //humidTransfer is set to 1 since humid data is ready to be transferred via smartmesh
 }
 
 
