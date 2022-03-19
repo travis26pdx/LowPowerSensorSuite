@@ -3,7 +3,7 @@
 #define HIH8120Addr         0x27                      //I2C Addr
 #define HIH8120Cmd          0xFF                      //HandShake Cmd
 #define BytesToRead         4                         //Lens of Read Bytes 
-#define SampleNums          1                        //Total Sample Nums
+#define SampleNums          1                         //Total Sample Nums
 #define SampleInterval      100                       //Ms
 #define MeasureIntervalTemp     0.1 * 100000          //Measure every 10sec
 #define MeasureIntervalHumi     0.2 * 100000          //Measure every 20sec
@@ -20,7 +20,8 @@ float HumiSum = 0;                                    //Store History Humi Sum
 float TempSum = 0;
 float HumiAvg = 0;                                    //Calculate Average According to Humi Sum 
 float TempAvg = 0;
-float Humi,Temp;                                    //Humi (%) and Temp (C)
+float Humi,Temp;                                      //Humi (%) and Temp (C)
+bool dataSent = false;                                //Used to determine if MCU should go into sleep mode
 
 IpMtWrapper       ipmtwrapper;
 
@@ -35,7 +36,6 @@ void generateData(uint16_t* returnVal) {
      }
      if (millis() - MeasureTimeHumi >= MeasureIntervalHumi) {    //Measure humidity every 20 seconds
          MeasureTimeHumi = millis();                             //Reset Timer
-         GetHIHSensor();
          returnVal[1] = (int)(Humi * 100);
          returnVal[2] = 0;
      }
@@ -43,22 +43,27 @@ void generateData(uint16_t* returnVal) {
          MeasureTimeN2O = millis();                              //Reset Timer
          returnVal[2] = 1000;                                    //Placeholder value for N2O
      }
+     dataSent = true;
 }
 
 void setup() {                                        //put your setup code here, to run once:
   ipmtwrapper.setup(
-      60000,                           // srcPort
-      (uint8_t*)ipv6Addr_manager,      // destAddr
-      61000,                           // destPort
-      10000,                           // dataPeriod (ms)
-      generateData                     // dataGenerator
+      60000,                                          // srcPort
+      (uint8_t*)ipv6Addr_manager,                     // destAddr
+      61000,                                          // destPort
+      100,                                            // dataPeriod (ms)
+      generateData                                    // dataGenerator
   );
-  Serial.begin(9600);                                //Init Serial
+  Serial.begin(9600);                                 //Init Serial
   Wire.begin();                                       //I2C Begin
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  if (dataSent == true) {
+      sleep(10000);                                  //Have MCU sleep for 10 seconds after data has been sent
+  }
+  dataSent = false;
   ipmtwrapper.loop();
 }
 
@@ -67,7 +72,7 @@ void GetHIHSensor(){
   byte HIHdata[4];                                    //Store Data Read
   byte HIHstatus = 0;                                 //Sensor Status
   int Reading;                                        //Convert Data Read
-  //float Humi,Temp;                                    //Humi (%) and Temp (C)
+  //float Humi,Temp;                                  //Humi (%) and Temp (C)
   Wire.beginTransmission(HIH8120Addr);                //I2C HandShake
   Wire.write(HIH8120Cmd);
   Wire.endTransmission();
