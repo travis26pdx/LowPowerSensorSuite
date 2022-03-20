@@ -71,6 +71,7 @@ public:
     FRESULT write(const void*, UINT, UINT*);
     FRESULT lseek(FIL*, DWORD); /* Move file pointer of a file object */
     FRESULT lseek(DWORD);
+	FRESULT endseek(void); // **NEW** Move file point to end of file object
     FRESULT close(FIL*); /* Close an open file object */
     FRESULT close(void);
     FRESULT opendir(DIR*, const TCHAR*); /* Open an existing directory */

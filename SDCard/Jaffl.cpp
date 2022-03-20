@@ -344,6 +344,13 @@ FRESULT FFS::lseek(
     return f_lseek(&fil_obj, ofs);
 }
 
+FRESULT FFS::endseek(
+		void /* Moves file pointer to end of currently open file */
+		)
+{
+	return f_lseek(&fil_obj, f_size(&fil_obj));
+}
+
 
 #if _FS_MINIMIZE <= 1
 /*-----------------------------------------------------------------------*/
