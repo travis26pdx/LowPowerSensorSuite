@@ -43,7 +43,7 @@ def changeGraph(sensor):
         title = 'Humidity(RH%)' + title
         graphPanel.__init__(MainMesh, FF_GRAPH, title, ActiveMote, MainMesh.Motes[ActiveMote].humid)
     elif sensor == hist_headers[4]:
-        title = 'Light intensity (Lux)' + title
+        title = 'NO2 (ppm)' + title
         graphPanel.__init__(MainMesh, FF_GRAPH, title, ActiveMote, MainMesh.Motes[ActiveMote].lux)
     elif sensor == hist_headers[5]:
         title = 'Oxygen (%)' + title
@@ -73,7 +73,7 @@ def GUI_History_Table(Motenum):
     for widget in FFF_hist.winfo_children():
         widget.destroy()
     hist_col = []
-    hist_headers = ("Date", "Time", "Temp", "Humid", "Lux", "O2", "CO2", "Accel", "Wind", "Rain")
+    hist_headers = ("Date", "Time", "Temp", "Humid", "NO2")
     for n in range(len(hist_headers)):
         if not(n == 0 or n == 1):
             headerButtons[n-2]['command'] = lambda x=hist_headers[n]: changeGraph(x)
@@ -82,9 +82,8 @@ def GUI_History_Table(Motenum):
         col = [UTCtoDate(sample.timestamp),
                sample.temp,
                sample.humid,
-               sample.lux,
-               sample.o2,
-               sample.co2, sample.accel, sample.wind, sample.rain]
+               sample.lux
+               ] # Delete rows from right table, but only number section
         hist_col.append(col)
     H_Table = MoteTable(FFF_hist, None, None, hist_col, MainMesh.Motes[Motenum].timesInDate)
     H_Table.pack_in(False)
@@ -139,15 +138,14 @@ Mcanvas.bind('<Configure>', lambda e: Mcanvas.configure(scrollregion=Mcanvas.bbo
 SecondFrame = Frame(Mcanvas)
 Mcanvas.create_window((0,0), window=SecondFrame, anchor=NW, width = 700)
 
-Headers  = ("Mote","Status", "Temp", "Humid", "Lux", "O2", "CO2", "Accel", "Wind", "Rain")
+Headers  = ("Mote","Status", "Temp", "Humid", "NO2") #Deleting headers from left table
 Mote_Rows = []
 if MainMesh.NumOfMotes == 1:
     row = [MainMesh.Motes[0].MAC[len(MainMesh.Motes[0].MAC) - 8:len(MainMesh.Motes[0].MAC)], MainMesh.Motes[0].status,
            MainMesh.Motes[0].temp[-1],
            MainMesh.Motes[0].humid[-1],
-           MainMesh.Motes[0].lux[-1],
-           MainMesh.Motes[0].o2[-1],
-           MainMesh.Motes[0].co2[-1], MainMesh.Motes[0].accel[-1], MainMesh.Motes[0].wind[-1], MainMesh.Motes[0].rain[-1]]
+           MainMesh.Motes[0].lux[-1]
+           ] # Delete column from mote view
     Mote_Rows.append(row)
 else:
     for mote in MainMesh.Motes:
@@ -196,18 +194,18 @@ Hcanvas.bind('<Configure>', lambda e: Hcanvas.configure(scrollregion=Hcanvas.bbo
 FFF_hist = Frame(Hcanvas)
 Hcanvas.create_window((0, 0), window=FFF_hist, anchor='nw', height=270)
 
-hist_headers = ("Date", "Time", "Temp", "Humid", "Lux", "O2", "CO2", "Accel", "Wind", "Rain")
+hist_headers = ("Date", "Time", "Temp", "Humid", "NO2")# Deleting row of buttons of right table
 headerButtons = []
 for n in range(len(hist_headers)):
     ##Grid.rowconfigure(FF_Headers, n, weight=1)
     if n == 0 or n == 1:
-        Label(FF_Headers, bg='light blue', text=hist_headers[n], relief=RAISED, borderwidth=2, pady=5,
-              font=("Helvetica",8)).grid(
-            row=n + 1, sticky=NSEW)
+        Label(FF_Headers, bg='light blue', text=hist_headers[n], relief=RAISED, borderwidth=2, pady=16,
+              font=("Helvetica",10)).grid(
+            row=n + 1, sticky=NSEW) # Change Format of buttons, pady change height of button
     else:
         headerButtons.append(Button(FF_Headers, bg='light blue',
-                                    text=hist_headers[n], borderwidth=2, pady=1))
-        headerButtons[-1].grid(row=n + 1, sticky=NSEW)
+                                    text=hist_headers[n], borderwidth=2, pady=16))
+        headerButtons[-1].grid(row=n + 1, sticky=NSEW) # Keep pady the same as above
 
 GUI_History_Table(ActiveMote)
 graphPanel = InteractiveGraph(MainMesh,
@@ -247,8 +245,8 @@ Frame_History.grid(pady=6, padx=8, row = 0, rowspan=2,  column = 1, sticky=NSEW)
 Lab_Directory.grid(row = 0, column = 0, columnspan= 2, sticky=W)
 Lab_ChangeDir.grid(row = 1, column = 0, )
 In_dir.grid(row = 1, column = 1)
-lab_numOfMotes.grid(row = 2, column = 0, columnspan= 2, sticky=W)
-lab_DataSpan.grid(row = 3, column = 0, columnspan= 2, sticky=W)
+# lab_numOfMotes.grid(row = 2, column = 0, columnspan= 2, sticky=W) # Number of motes online code
+lab_DataSpan.grid(row = 3, column = 0, columnspan= 2, sticky=W) # Data Span code
 
 
 Grid.columnconfigure(Frame_Motes, 0, weight=10)
