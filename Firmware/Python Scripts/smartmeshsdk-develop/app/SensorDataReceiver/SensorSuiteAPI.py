@@ -14,17 +14,18 @@ import re
 # ================================ Classes for reading and golding data logs ==========================================
 
 class sample: # Sample Object structure
-    def __init__(self, timestamp, temp, humid, lux, o2, co2, accel, wind, rain):
+    def __init__(self, timestamp, temp, humid, lux#, o2, co2, accel, wind, rain
+    ):
 
         self.timestamp = timestamp
         self.temp = temp
         self.humid = humid
         self.lux = lux
-        self.o2 = o2
-        self.co2 = co2
-        self.accel = accel
-        self.wind = wind
-        self.rain = rain
+        #self.o2 = o2 COMMENTING OUT SENSORS WE DON'T USE SO WE CAN READ 3 DATA VALUES FROM LOG FILE
+        #self.co2 = co2
+        #self.accel = accel
+        #self.wind = wind
+        #self.rain = rain
 
 class Mote(): # Mote Object Structure : Contains Multiple Sample Objects
     def __init__(self, Directory, Logname):
@@ -72,27 +73,30 @@ class Mote(): # Mote Object Structure : Contains Multiple Sample Objects
                     self.timesInDate[-1].append(self.timestamp[-1])
                     self.temp.append(float(word[1][0:-1])/100)
                     self.humid.append(float(word[2][0:-1]) / 100)
-                    self.lux.append(float(word[3][0:-1]) / 100)
-                    self.o2.append(float(word[4][0:-1]) / 100)
-                    self.co2.append(float(word[5][0:-1]))
-                    self.accel.append((float(word[6][0:-1]) / 100))#,
+                    #self.lux.append(float(word[3][0:-1]) / 100) REPLACED THIS CODE WITH THE TWO LINES OF CODE BELOW
+                    if word[3][len(word[3])-1] == ',': self.lux.append(float(word[3][0:-1]) / 100)
+                    else:self.lux.append(float(word[3]) / 100)
+                    #self.o2.append(float(word[4][0:-1]) / 100) COMMENTING OUT SENSORS WE DON'T USE SO WE CAN READ 3 DATA VALUES FROM LOG FILE
+                    #self.co2.append(float(word[5][0:-1]))
+                    #self.accel.append((float(word[6][0:-1]) / 100))#,
                                        # float(word[7][0:-1]) / 100 * 0,
                                        # float(word[8][0:-1]) / 100 * 0))
-                    self.wind.append(float(word[9][0:-1]) / 100)
+                    #self.wind.append(float(word[9][0:-1]) / 100)
 
-                    if word[10][len(word[10])-1] == ',': self.rain.append(float(word[10][0:-1]) / 100)
-                    else:self.rain.append(float(word[10]) / 100)
+                    #if word[10][len(word[10])-1] == ',': self.rain.append(float(word[10][0:-1]) / 100)
+                    #else:self.rain.append(float(word[10]) / 100)
 
                     self.samples.append(sample(
                         self.timestamp[-1],
                         self.temp[-1],
                         self.humid[-1],
                         self.lux[-1],
-                        self.o2[-1],
-                        self.co2[-1],
-                        self.accel[-1],
-                        self.wind[-1],
-                        self.rain[-1]))
+                        #self.o2[-1], COMMENTING OUT SENSORS WE DON'T USE SO WE CAN READ 3 DATA VALUES FROM LOG FILE
+                        #self.co2[-1],
+                        #self.accel[-1],
+                        #self.wind[-1],
+                        #self.rain[-1]
+                        ))
         self.Logfile.seek(0)
         self.Logfile.close()
 
@@ -370,12 +374,12 @@ if __name__ == '__main__':
     #print mote0.timesInDate[0]
     #print mote0.timesInDate[-1]
     print (Mesh1.UpdateMesh())
-    Logfile = open(Data_Loc + '3223d3.log', "r")
-    for i in range(1000):
-        print (i)
-        Logfile.seek(0)
-        print (Logfile.readlines()[-1])
-        Logfile.seek(0)
+    #Logfile = open(Data_Loc + '3223d3.log', "r") WHERE DID THIS CODE COME FROM?
+    #for i in range(1000):
+    #    print (i)
+    #    Logfile.seek(0)
+    #    print (Logfile.readlines()[-1])
+    #    Logfile.seek(0)
 
         # while 1:
         #     where = Logfile.tell()
