@@ -171,7 +171,8 @@ if __name__ == '__main__':
     MainMesh.LoadMesh()
     # initialize GUI
     root = Tk()
-    graphPanel = InteractiveGraph(MainMesh,root,0, MainMesh.Motes[0].wind)
+    graphPanel = InteractiveGraph(MainMesh, root, 0, 0, MainMesh.Motes[0].temp)
+    #graphPanel = InteractiveGraph(MainMesh,root,0, MainMesh.Motes[0].wind) THIS WAS OLD CODE
 
     root.after(33, graphPanel.updateGUI)
     root.mainloop()
