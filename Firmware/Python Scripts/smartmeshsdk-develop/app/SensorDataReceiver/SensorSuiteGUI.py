@@ -22,11 +22,11 @@ def UpdateTable(Table, macs):
                         row[2]['text'] = mote.temp[-1]
                         row[3]['text'] = mote.humid[-1]
                         row[4]['text'] = mote.lux[-1]
-                        row[5]['text'] = mote.o2[-1]
-                        row[6]['text'] = mote.co2[-1]
-                        row[7]['text'] = mote.accel[-1]
-                        row[8]['text'] = mote.wind[-1]
-                        row[9]['text'] = mote.rain[-1]
+                        #row[5]['text'] = mote.o2[-1] COMMENTING OUT SENSORS WE DON'T USE SO WE CAN READ 3 DATA VALUES FROM LOG FILE
+                        #row[6]['text'] = mote.co2[-1]
+                        #row[7]['text'] = mote.accel[-1]
+                        #row[8]['text'] = mote.wind[-1]
+                        #row[9]['text'] = mote.rain[-1]
 
 
 # Change mote GRAPH
@@ -254,6 +254,7 @@ Grid.columnconfigure(Frame_Motes, 1, weight=10)
 pady = 190
 # Tre_MoteTable.grid(row=0,column=0, ipady=pady, sticky=NS)
 # MoteScroll.grid(row=0,column=1, sticky=NS)
+
 def updateGUI():
     graphPanel.updateGUI()
     root.after(500, updateGUI)
@@ -261,6 +262,8 @@ def updateData():
     MACS = MainMesh.UpdateMesh()
     if MACS != []:
         UpdateTable(M_Table.table, MACS)
+        GUI_History_Table(ActiveMote) #Added this code in order to update history table
+        Hcanvas.configure(scrollregion=Hcanvas.bbox("all")) #Used to update scroll bar in history frame
     root.after(2000, updateData)
 def updateStatus():
     MACS = MainMesh.UpdateStatus()
