@@ -1,5 +1,6 @@
 #include <Wire.h>
 #include <IpMtWrapper.h>
+#include "sdcard.h"
 #define HIH8120Addr         0x27                      //I2C Addr
 #define HIH8120Cmd          0xFF                      //HandShake Cmd
 #define BytesToRead         4                         //Lens of Read Bytes 
@@ -33,15 +34,18 @@ void generateData(uint16_t* returnVal) {
          returnVal[0] = (int)(Temp * 100);
          returnVal[1] = 0;
          returnVal[2] = 0;
+         SDwrite(SENSOR_TEMP, Temp);
      }
      if (millis() - MeasureTimeHumi >= MeasureIntervalHumi) {    //Measure humidity every 20 seconds
          MeasureTimeHumi = millis();                             //Reset Timer
          returnVal[1] = (int)(Humi * 100);
          returnVal[2] = 0;
+         SDwrite(SENSOR_HUMI, Humi);
      }
      if (millis() - MeasureTimeN2O >= MeasureIntervalN2O) {      //Measure N2O every 30 seconds
          MeasureTimeN2O = millis();                              //Reset Timer
          returnVal[2] = 1000;                                    //Placeholder value for N2O
+         SDwrite(SENSOR_NO2, returnVal[2]);
      }
      dataSent = true;
 }
@@ -56,6 +60,7 @@ void setup() {                                        //put your setup code here
   );
   Serial.begin(9600);                                 //Init Serial
   Wire.begin();                                       //I2C Begin
+  initSDCard();                                       //Init SD Card
 }
 
 void loop() {
