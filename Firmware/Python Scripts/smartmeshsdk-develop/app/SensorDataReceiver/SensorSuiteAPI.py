@@ -14,13 +14,13 @@ import re
 # ================================ Classes for reading and golding data logs ==========================================
 
 class sample: # Sample Object structure
-    def __init__(self, timestamp, temp, humid, lux#, o2, co2, accel, wind, rain
+    def __init__(self, timestamp, temp, humid, N2O#, o2, co2, accel, wind, rain
     ):
 
         self.timestamp = timestamp
         self.temp = temp
         self.humid = humid
-        self.lux = lux
+        self.N2O = N2O
         #self.o2 = o2 COMMENTING OUT SENSORS WE DON'T USE SO WE CAN READ 3 DATA VALUES FROM LOG FILE
         #self.co2 = co2
         #self.accel = accel
@@ -53,7 +53,7 @@ class Mote(): # Mote Object Structure : Contains Multiple Sample Objects
         self.timestamp = []
         self.temp = []
         self.humid = []
-        self.lux = []
+        self.N2O = []
         self.o2 = []
         self.co2 = []
         self.accel = []
@@ -74,8 +74,8 @@ class Mote(): # Mote Object Structure : Contains Multiple Sample Objects
                     self.temp.append(float(word[1][0:-1])/100)
                     self.humid.append(float(word[2][0:-1]) / 100)
                     #self.lux.append(float(word[3][0:-1]) / 100) REPLACED THIS CODE WITH THE TWO LINES OF CODE BELOW
-                    if word[3][len(word[3])-1] == ',': self.lux.append(float(word[3][0:-1]) / 100)
-                    else:self.lux.append(float(word[3]) / 100)
+                    if word[3][len(word[3])-1] == ',': self.N2O.append(float(word[3][0:-1]) / 100)
+                    else:self.N2O.append(float(word[3]) / 100)
                     #self.o2.append(float(word[4][0:-1]) / 100) COMMENTING OUT SENSORS WE DON'T USE SO WE CAN READ 3 DATA VALUES FROM LOG FILE
                     #self.co2.append(float(word[5][0:-1]))
                     #self.accel.append((float(word[6][0:-1]) / 100))#,
@@ -90,7 +90,7 @@ class Mote(): # Mote Object Structure : Contains Multiple Sample Objects
                         self.timestamp[-1],
                         self.temp[-1],
                         self.humid[-1],
-                        self.lux[-1],
+                        self.N2O[-1],
                         #self.o2[-1], COMMENTING OUT SENSORS WE DON'T USE SO WE CAN READ 3 DATA VALUES FROM LOG FILE
                         #self.co2[-1],
                         #self.accel[-1],
@@ -120,7 +120,7 @@ class Mote(): # Mote Object Structure : Contains Multiple Sample Objects
         return[fromI,toI]
     # Return Samples that match SensorIn
     def Sensor(self, sensorIn):
-        sensors = ('temp', 'humid', 'lux', 'o2', 'co2', 'accel', 'wind', 'rain')
+        sensors = ('temp', 'humid', 'N2O', 'o2', 'co2', 'accel', 'wind', 'rain')
         self.array = []
         if sensorIn == sensors[0]:
             for sample in self.samples:
@@ -132,7 +132,7 @@ class Mote(): # Mote Object Structure : Contains Multiple Sample Objects
             return self.array
         elif sensorIn == sensors[2]:
             for sample in self.samples:
-                self.array.append(sample.lux)
+                self.array.append(sample.N2O)
             return self.array
         elif sensorIn == sensors[3]:
             for sample in self.samples:
@@ -244,7 +244,7 @@ class MeshNetwork():    # Mesh Network object structure : Contains multiple Mote
 
     # Check if any of the latest samples in any of the motes triggers an Alert
     def CheckAlert(self):
-        sensors = ('temp', 'humid', 'lux', 'o2', 'co2', 'accel', 'wind', 'rain')
+        sensors = ('temp', 'humid', 'N2O', 'o2', 'co2', 'accel', 'wind', 'rain')
         alerts = []
         alertMotes = []
         is_alerted = False
@@ -267,14 +267,14 @@ class MeshNetwork():    # Mesh Network object structure : Contains multiple Mote
                 else:
                     alerts.append('HIGH_HUMID')
                     print ('> humid is above ' + self.humidLimit[1] + ' for mote ' + mote.MAC)
-            elif (self.luxLimit[0] > lastSample.lux) or (self.luxLimit[1] < lastSample.lux):
+            elif (self.N2OLimit[0] > lastSample.N2O) or (self.N2OLimit[1] < lastSample.N2O):
                 is_alerted = True
-                if self.luxLimit[0] < lastSample.lux:
-                    alerts.append('LOW_LUX')
-                    print ('> lux is bellow ' + self.luxLimit[0] + ' for mote ' + mote.MAC)
+                if self.N2OLimit[0] < lastSample.N2O:
+                    alerts.append('LOW_N2O')
+                    print ('> N2O is bellow ' + self.N2OLimit[0] + ' for mote ' + mote.MAC)
                 else:
-                    alerts.append('HIGH_LUX')
-                    print ('> lux is above ' + self.luxLimit[1] + ' for mote ' + mote.MAC)
+                    alerts.append('HIGH_N2O')
+                    print ('> N2O is above ' + self.N2OLimit[1] + ' for mote ' + mote.MAC)
             elif (self.o2Limit[0] > lastSample.o2) or (self.o2Limit[1] < lastSample.o2):
                 is_alerted = True
                 if self.o2Limit[0] < lastSample.o2:
@@ -313,14 +313,14 @@ class MeshNetwork():    # Mesh Network object structure : Contains multiple Mote
 
     # set alert triggers: limits should be a two element tuple (low trigger, high trigger)
     def SetAlertTriggers(self, sensorIn, limits):
-        sensors = ('temp', 'humid', 'lux', 'o2', 'co2', 'accel', 'wind', 'rain')
+        sensors = ('temp', 'humid', 'N2O', 'o2', 'co2', 'accel', 'wind', 'rain')
         self.array = []
         if sensorIn == sensors[0]:
             self.tempLimit = limits
         elif sensorIn == sensors[1]:
             self.humidLimit = limits
         elif sensorIn == sensors[2]:
-            self.luxLimit = limits
+            self.N2OLimit = limits
         elif sensorIn == sensors[3]:
             self.o2Limit = limits
         elif sensorIn == sensors[4]:
@@ -395,7 +395,6 @@ if __name__ == '__main__':
 
 
 '''
-
 #========================================= MESH NETWORK ================================================================
                                         /       |       \
                                       /         |         \

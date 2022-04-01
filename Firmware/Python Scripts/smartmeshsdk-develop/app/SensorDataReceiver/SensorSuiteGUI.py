@@ -21,7 +21,7 @@ def UpdateTable(Table, macs):
                         row[1]['text'] = mote.status
                         row[2]['text'] = mote.temp[-1]
                         row[3]['text'] = mote.humid[-1]
-                        row[4]['text'] = mote.lux[-1]
+                        row[4]['text'] = mote.N2O[-1]
                         #row[5]['text'] = mote.o2[-1] COMMENTING OUT SENSORS WE DON'T USE SO WE CAN READ 3 DATA VALUES FROM LOG FILE
                         #row[6]['text'] = mote.co2[-1]
                         #row[7]['text'] = mote.accel[-1]
@@ -31,7 +31,7 @@ def UpdateTable(Table, macs):
 
 # Change mote GRAPH
 def changeGraph(sensor):
-    hist_headers = ("Date", "Time", "Temp", "Humid", "Lux", "O2", "CO2", "Accel", "Wind", "Rain")
+    hist_headers = ("Date", "Time", "Temp", "Humid", "N2O", "O2", "CO2", "Accel", "Wind", "Rain")
     mote =  MainMesh.Motes[ActiveMote]
     mac = mote.MAC[len(mote.MAC) - 8:len(mote.MAC)]
     title = ' samples for mote ' + mac
@@ -43,8 +43,8 @@ def changeGraph(sensor):
         title = 'Humidity(RH%)' + title
         graphPanel.__init__(MainMesh, FF_GRAPH, title, ActiveMote, MainMesh.Motes[ActiveMote].humid)
     elif sensor == hist_headers[4]:
-        title = 'NO2 (ppm)' + title
-        graphPanel.__init__(MainMesh, FF_GRAPH, title, ActiveMote, MainMesh.Motes[ActiveMote].lux)
+        title = 'N2O (ppm)' + title
+        graphPanel.__init__(MainMesh, FF_GRAPH, title, ActiveMote, MainMesh.Motes[ActiveMote].N2O)
     elif sensor == hist_headers[5]:
         title = 'Oxygen (%)' + title
         graphPanel.__init__(MainMesh, FF_GRAPH, title, ActiveMote, MainMesh.Motes[ActiveMote].o2)
@@ -73,7 +73,7 @@ def GUI_History_Table(Motenum):
     for widget in FFF_hist.winfo_children():
         widget.destroy()
     hist_col = []
-    hist_headers = ("Date", "Time", "Temp", "Humid", "NO2")
+    hist_headers = ("Date", "Time", "Temp", "Humid", "N2O")
     for n in range(len(hist_headers)):
         if not(n == 0 or n == 1):
             headerButtons[n-2]['command'] = lambda x=hist_headers[n]: changeGraph(x)
@@ -82,7 +82,7 @@ def GUI_History_Table(Motenum):
         col = [UTCtoDate(sample.timestamp),
                sample.temp,
                sample.humid,
-               sample.lux
+               sample.N2O
                ] # Delete rows from right table, but only number section
         hist_col.append(col)
     H_Table = MoteTable(FFF_hist, None, None, hist_col, MainMesh.Motes[Motenum].timesInDate)
@@ -124,7 +124,7 @@ lab_DataSpan = Label(Frame_Setup, text = "DateSpan of collected Data:   " + Main
 #========================================== Frame_Motes ===============================================================
 # CREATE SCROLLABLE FRAME/CANVAS
 MoteFrame = Frame(Frame_Motes)
-MoteFrame.pack(fill=BOTH, expand = 1, ipadx = 20)
+MoteFrame.pack(fill=BOTH, expand = 1, ipadx = 40)
 # Create Canvas
 Mcanvas = Canvas(MoteFrame)
 Mcanvas.pack(side=LEFT, fill=BOTH, expand=1)
@@ -138,13 +138,13 @@ Mcanvas.bind('<Configure>', lambda e: Mcanvas.configure(scrollregion=Mcanvas.bbo
 SecondFrame = Frame(Mcanvas)
 Mcanvas.create_window((0,0), window=SecondFrame, anchor=NW, width = 700)
 
-Headers  = ("Mote","Status", "Temp", "Humid", "NO2") #Deleting headers from left table
+Headers  = ("Mote","Status", "Temp", "Humid", "N2O") #Deleting headers from left table
 Mote_Rows = []
 if MainMesh.NumOfMotes == 1:
     row = [MainMesh.Motes[0].MAC[len(MainMesh.Motes[0].MAC) - 8:len(MainMesh.Motes[0].MAC)], MainMesh.Motes[0].status,
            MainMesh.Motes[0].temp[-1],
            MainMesh.Motes[0].humid[-1],
-           MainMesh.Motes[0].lux[-1]
+           MainMesh.Motes[0].N2O[-1]
            ] # Delete column from mote view
     Mote_Rows.append(row)
 else:
@@ -152,7 +152,7 @@ else:
         row = [mote.MAC[len(mote.MAC) - 8:len(mote.MAC)], mote.status,
                mote.temp[-1],
                mote.humid[-1],
-               mote.lux[-1],
+               mote.N2O[-1],
                mote.o2[-1],
                mote.co2[-1], mote.accel[-1], mote.wind[-1], mote.rain[-1]]
         Mote_Rows.append(row)
@@ -194,7 +194,7 @@ Hcanvas.bind('<Configure>', lambda e: Hcanvas.configure(scrollregion=Hcanvas.bbo
 FFF_hist = Frame(Hcanvas)
 Hcanvas.create_window((0, 0), window=FFF_hist, anchor='nw', height=270)
 
-hist_headers = ("Date", "Time", "Temp", "Humid", "NO2")# Deleting row of buttons of right table
+hist_headers = ("Date", "Time", "Temp", "Humid", "N2O")# Deleting row of buttons of right table
 headerButtons = []
 for n in range(len(hist_headers)):
     ##Grid.rowconfigure(FF_Headers, n, weight=1)
@@ -288,5 +288,6 @@ def on_closing():
 root.protocol("WM_DELETE_WINDOW", on_closing)
 
 root.mainloop()
+
 
 

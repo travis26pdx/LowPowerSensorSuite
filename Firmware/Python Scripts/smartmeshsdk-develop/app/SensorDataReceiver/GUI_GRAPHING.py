@@ -79,9 +79,9 @@ class InteractiveGraph():
         L_numSamples = Label(FFrame2, text = "  Number of Samples: " + str(len(self.timestamps))).pack(side=LEFT)
     #===========================INITIALIZE PLOT AND PLOTTING DATA
         y = self.Data[0:self.span]
-        t = self.timestamps[0 :self.span]
-        self.FFigure = plt.figure(figsize=(9,4), dpi = 60)
-        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%H:%M'))
+        t = self.timestamps[0:self.span]
+        self.FFigure = plt.figure(figsize=(9,4), dpi = 120)#Modify DPI to change size of Graph
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))
         self.FFigure.add_subplot(111).plot(t,y)                             # PLOT
         chart = FigureCanvasTkAgg(self.FFigure, self.FFrame)
         chart.get_tk_widget().grid(row=0,column=0)
@@ -152,7 +152,7 @@ class InteractiveGraph():
         y = self.Data[newStart:newFinal]
         t = self.timestamps[newStart:newFinal]
         self.FFigure.clear()
-        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%H:%M'))
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))
         self.FFigure.add_subplot(111).plot(t, y)
         plt.title(self.title)
         plt.xlabel(self.labels[0])
