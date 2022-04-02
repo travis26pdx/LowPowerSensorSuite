@@ -428,6 +428,9 @@ class MoteTable():
             for date in self.dates:
                 datestr =UTCtoDate(date[0])
                 self.headcol.append(Button(Parent, text=datestr[0:datestr.find(':')], relief=RAISED, borderwidth=2, height = 0, pady=0, font=("Helvetica",8)))
+                #print("Start")
+                #print(datestr[0:datestr.find(':')]) #Used to find out if all of the dates in the log file are displayed in the terminal window
+                #print("Stop")
 
         # Layout lables and buttons in Rows: Disable by inputting tableRowa = None
         if not (tableRows == None):
@@ -457,7 +460,9 @@ class MoteTable():
                 Label_col = []
                 for cell in col:
                     if cell == col[0]:
-                        Label_col.append(Label(Parent, font=("Helvetica",8), text=cell[cell.find(':')+1:len(cell)-3], relief=GROOVE, borderwidth=2, padx=2))
+                        #Label_col.append(Label(Parent, font=("Helvetica",8), text=cell[cell.find(':')+1:len(cell)-3], relief=GROOVE, borderwidth=2, padx=2))
+                        #Replaced the top commented out code with the code below so that the seconds could be seen in the timestamps
+                        Label_col.append(Label(Parent, font=("Helvetica",8), text=cell[cell.find(':')+1:len(cell)], relief=GROOVE, borderwidth=2, padx=2))
                     else:
                         Label_col.append(Label(Parent, font=("Helvetica",8), bg = 'gainsboro', text=cell, relief=SUNKEN, borderwidth=1, padx=1))
                     self.table.append(Label_col)
@@ -474,13 +479,17 @@ class MoteTable():
                 self.LayRow(self.table[n], n + 1, 0)
         else:
             lastcol = 0
+            #self.headcol[0].grid(row=0, column=0, columnspan= 13, sticky=NSEW) These are just test cases for how to configure the date headers
+            #self.headcol[1].grid(row=0, column=13, columnspan= 13, sticky=NSEW)
+            #self.headcol[2].grid(row=0, column=26, columnspan= 13, sticky=NSEW)
+            #self.headcol[3].grid(row=0, column=39, columnspan= 13, sticky=NSEW)
             for n in range(len(self.table)):
                 if n < len(self.headcol):
                     Grid.rowconfigure(self.ParentFrame, n, weight=1)
-                    span = len(self.dates[n])*9
+                    span = len(self.dates[n])*4 #This was *9 before
                     self.headcol[n].grid(row=0, column=lastcol, columnspan= span, sticky=NSEW)
                     print (self.ParentFrame.winfo_geometry())
-                    lastcol = span
+                    lastcol = lastcol + span #before this was lastcol = span which is incorrect because the lastcol would not change
 
                 self.Laycol(self.table[n], n, 1)
 
