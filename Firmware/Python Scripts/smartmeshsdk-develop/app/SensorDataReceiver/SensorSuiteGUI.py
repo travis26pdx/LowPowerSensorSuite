@@ -28,9 +28,10 @@ def UpdateTable(Table, macs):
                         #row[8]['text'] = mote.wind[-1]
                         #row[9]['text'] = mote.rain[-1]
 
-
 # Change mote GRAPH
 def changeGraph(sensor):
+    global sensorTracker #Variable to track different sensors (useful for updating graphs)
+    sensorTracker = 0
     hist_headers = ("Date", "Time", "Temp", "Humid", "N2O", "O2", "CO2", "Accel", "Wind", "Rain")
     mote =  MainMesh.Motes[ActiveMote]
     mac = mote.MAC[len(mote.MAC) - 8:len(mote.MAC)]
@@ -38,12 +39,15 @@ def changeGraph(sensor):
 
     if sensor == hist_headers[2]:
         title = 'Temperature(C)' + title
+        sensorTracker = 0 #Used for tracking temp sensor when updating graph
         graphPanel.__init__(MainMesh, FF_GRAPH, title, ActiveMote, MainMesh.Motes[ActiveMote].temp)
     elif sensor == hist_headers[3]:
         title = 'Humidity(RH%)' + title
+        sensorTracker = 1 #Used for tracking humid sensor when updating graph
         graphPanel.__init__(MainMesh, FF_GRAPH, title, ActiveMote, MainMesh.Motes[ActiveMote].humid)
     elif sensor == hist_headers[4]:
         title = 'N2O (ppm)' + title
+        sensorTracker = 2 #Used for tracking N2O sensor when updating graph
         graphPanel.__init__(MainMesh, FF_GRAPH, title, ActiveMote, MainMesh.Motes[ActiveMote].N2O)
     elif sensor == hist_headers[5]:
         title = 'Oxygen (%)' + title
@@ -79,11 +83,16 @@ def GUI_History_Table(Motenum):
             headerButtons[n-2]['command'] = lambda x=hist_headers[n]: changeGraph(x)
 
     for sample in MainMesh.Motes[Motenum].samples:
+        if sample.N2O == 0: #Checking for 0 in N2O
+            sample.N2O = "--"
+        if sample.humid == 0: #Checking for 0 in humid
+            sample.humid = "--"
         col = [UTCtoDate(sample.timestamp),
                sample.temp,
                sample.humid,
                sample.N2O
                ] # Delete rows from right table, but only number section
+        #print (UTCtoDate(sample.timestamp)) #prints the date and timestamp
         hist_col.append(col)
     H_Table = MoteTable(FFF_hist, None, None, hist_col, MainMesh.Motes[Motenum].timesInDate)
     H_Table.pack_in(False)
@@ -153,8 +162,9 @@ else:
                mote.temp[-1],
                mote.humid[-1],
                mote.N2O[-1],
-               mote.o2[-1],
-               mote.co2[-1], mote.accel[-1], mote.wind[-1], mote.rain[-1]]
+               #mote.o2[-1], Commenting out sensors we do not use at the moment. This code relates to the other motes present in the mesh network.
+               #mote.co2[-1], mote.accel[-1], mote.wind[-1], mote.rain[-1]
+               ]
         Mote_Rows.append(row)
 print ('mote len = ' + str(len(Mote_Rows)))
 M_Table = MoteTable(SecondFrame, Headers, Mote_Rows, None, None)
@@ -264,6 +274,7 @@ def updateData():
         UpdateTable(M_Table.table, MACS)
         GUI_History_Table(ActiveMote) #Added this code in order to update history table
         Hcanvas.configure(scrollregion=Hcanvas.bbox("all")) #Used to update scroll bar in history frame
+        graphPanel.updateGraph(sensorTracker) #Update the graph when new data gets logged
     root.after(2000, updateData)
 def updateStatus():
     MACS = MainMesh.UpdateStatus()
