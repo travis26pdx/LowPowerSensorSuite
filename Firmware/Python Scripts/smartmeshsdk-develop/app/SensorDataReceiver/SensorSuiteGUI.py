@@ -82,7 +82,7 @@ def GUI_History_Table(Motenum):
         if not(n == 0 or n == 1):
             headerButtons[n-2]['command'] = lambda x=hist_headers[n]: changeGraph(x)
 
-    for sample in MainMesh.Motes[Motenum].samples:
+    for sample in MainMesh.Motes[Motenum].samples[-10:]:
         if sample.N2O == 0: #Checking for 0 in N2O
             sample.N2O = "--"
         if sample.humid == 0: #Checking for 0 in humid
@@ -94,7 +94,7 @@ def GUI_History_Table(Motenum):
                ] # Delete rows from right table, but only number section
         #print (UTCtoDate(sample.timestamp)) #prints the date and timestamp
         hist_col.append(col)
-    H_Table = MoteTable(FFF_hist, None, None, hist_col, MainMesh.Motes[Motenum].timesInDate)
+    H_Table = MoteTable(FFF_hist, None, None, hist_col, MainMesh.Motes[Motenum].timesInDate[-1:])
     H_Table.pack_in(False)
 
 dir = sys.path[0] + "/DataOrganization/"
