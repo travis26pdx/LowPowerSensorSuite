@@ -94,7 +94,7 @@ def GUI_History_Table(Motenum):
                ] # Delete rows from right table, but only number section
         #print (UTCtoDate(sample.timestamp)) #prints the date and timestamp
         hist_col.append(col)
-    H_Table = MoteTable(FFF_hist, None, None, hist_col, MainMesh.Motes[Motenum].timesInDate[-1:])
+    H_Table = MoteTable(FFF_hist, None, None, hist_col, MainMesh.Motes[Motenum].timesInDate)
     H_Table.pack_in(False)
 
 dir = sys.path[0] + "/DataOrganization/"
