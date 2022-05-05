@@ -90,6 +90,7 @@ class InteractiveGraph():
         chart.get_tk_widget().grid(row=0,column=0)
         plt.grid()                                                          # ADD GRID
         plt.gcf().autofmt_xdate()                                           # DATE FORMAT
+        self.FFigure.clear()
 
         self.oldpoint = 0
         #self.updateDate()
@@ -167,9 +168,13 @@ class InteractiveGraph():
         newFinal = len(self.Data)
         print ('newRange == ' + str(newStart) + '--' + str(newFinal))
         y = self.Data[newStart:newFinal]
-        y = y[0::2] #Deletes 0's in humid array
         t = self.timestamps[newStart:newFinal]
-        t = t[0::2] #Deletes timestamps associated with 0's in humid array
+        x = np.array(y)
+        index_zero = np.where(x == 0)[0]
+        print(index_zero)
+        for i in sorted(index_zero, reverse=True):
+            del t[i]
+        y = x[x != 0]
         print(self.Data[len(self.Data)-1]) #To check to see if self.Data updates when a new value has been added to the log file
         self.FFigure.clear()
         #plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%H:%M')) #Removing data overlap on graph
