@@ -81,8 +81,8 @@ class InteractiveGraph():
         #t = self.timestamps[0:self.span]
         #self.Data = [0, 1, 2, 3, 4, 5] #Testing custom data
         #self.timestamps = [0, 1, 2, 3, 4, 5] #Testing custom timestamps
-        y = self.Data[len(self.Data)-10:len(self.Data)] #plotting last 10 data values in log file
-        t = self.timestamps[len(self.Data)-10:len(self.Data)]
+        y = self.Data[len(self.Data)-100:len(self.Data)] #plotting last 10 data values in log file
+        t = self.timestamps[len(self.Data)-100:len(self.Data)]
         self.FFigure = plt.figure(figsize=(9,4), dpi = 120)#Modify DPI to change size of Graph
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))
         self.FFigure.add_subplot(111).plot(t,y)                             # PLOT
@@ -164,17 +164,17 @@ class InteractiveGraph():
         #self.Data = self.MainMesh.Motes[0].temp
         realTime = self.MainMesh.Motes[self.Mnum].timestamp
         self.timestamps = [datetime.utcfromtimestamp(d) for d in realTime]
-        newStart = len(self.Data) - 10 #This is for only plotting the last 10 data values in the log file
+        newStart = len(self.Data) - 100 #This is for only plotting the last 10 data values in the log file
         newFinal = len(self.Data)
         print ('newRange == ' + str(newStart) + '--' + str(newFinal))
         y = self.Data[newStart:newFinal]
         t = self.timestamps[newStart:newFinal]
         x = np.array(y)
-        index_zero = np.where(x == 0)[0]
+        index_zero = np.where(x == 655.35)[0]
         print(index_zero)
         for i in sorted(index_zero, reverse=True):
             del t[i]
-        y = x[x != 0]
+        y = x[x != 655.35]
         print(self.Data[len(self.Data)-1]) #To check to see if self.Data updates when a new value has been added to the log file
         self.FFigure.clear()
         #plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%H:%M')) #Removing data overlap on graph
