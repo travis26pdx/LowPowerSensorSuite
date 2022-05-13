@@ -22,11 +22,17 @@ def UpdateTable(Table, macs):
                         row[2]['text'] = mote.temp[-1]
                         row[3]['text'] = mote.humid[-1]
                         row[4]['text'] = mote.N2O[-1]
+                        if mote.humid[-1] == 655.35:
+                                row[3]['text'] = "--"
+                        if mote.N2O[-1] == 655.35:
+                                row[4]['text'] = "--"
                         #row[5]['text'] = mote.o2[-1] COMMENTING OUT SENSORS WE DON'T USE SO WE CAN READ 3 DATA VALUES FROM LOG FILE
                         #row[6]['text'] = mote.co2[-1]
                         #row[7]['text'] = mote.accel[-1]
                         #row[8]['text'] = mote.wind[-1]
                         #row[9]['text'] = mote.rain[-1]
+
+sensorTracker = 0 #NEED TO HAVE THIS HERE SO THAT WHEN GUI IS FIRST LAUNCHED SENSORTRACKER WILL BE DEFINED!
 
 # Change mote GRAPH
 def changeGraph(sensor):
@@ -82,10 +88,10 @@ def GUI_History_Table(Motenum):
         if not(n == 0 or n == 1):
             headerButtons[n-2]['command'] = lambda x=hist_headers[n]: changeGraph(x)
 
-    for sample in MainMesh.Motes[Motenum].samples[-10:]:
-        if sample.N2O == 0: #Checking for 0 in N2O
+    for sample in MainMesh.Motes[Motenum].samples[-100:]:
+        if sample.N2O == 655.35: #Checking for 0 in N2O
             sample.N2O = "--"
-        if sample.humid == 0: #Checking for 0 in humid
+        if sample.humid == 655.35: #Checking for 0 in humid
             sample.humid = "--"
         col = [UTCtoDate(sample.timestamp),
                sample.temp,
@@ -114,6 +120,7 @@ root = Tk()
 root.title("Sensor Suite Data Viewer")
 #root.iconbitmap('')
 root.geometry("1050x650")
+root.state('zoomed')
 
 #========================================== Intialize Frames ==========================================================
 Frame_Setup = LabelFrame(root, text = 'setup',      relief = GROOVE, padx=10, pady=10, borderwidth=4)
@@ -274,6 +281,7 @@ def updateData():
         UpdateTable(M_Table.table, MACS)
         GUI_History_Table(ActiveMote) #Added this code in order to update history table
         Hcanvas.configure(scrollregion=Hcanvas.bbox("all")) #Used to update scroll bar in history frame
+        Hcanvas.xview_moveto(1) #Set scroll bar to the right position when new data arrives
         graphPanel.updateGraph(sensorTracker) #Update the graph when new data gets logged
     root.after(2000, updateData)
 def updateStatus():
