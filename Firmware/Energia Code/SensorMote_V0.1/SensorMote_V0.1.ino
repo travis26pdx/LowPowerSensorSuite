@@ -6,9 +6,9 @@
 #define BytesToRead         4                         //Lens of Read Bytes 
 #define SampleNums          1                         //Total Sample Nums
 #define SampleInterval      100                       //Ms
-#define MeasureIntervalTemp     0.1 * 100000          //Measure every 10sec
-#define MeasureIntervalHumi     0.2 * 100000          //Measure every 20sec
-#define MeasureIntervalN2O      0.3 * 100000          //Measure every 30sec
+#define MeasureIntervalTemp     60000                 //Measure every 60sec (60000ms) 1 minute
+#define MeasureIntervalHumi     120000                //Measure every 120sec (120000ms) 2 minutes
+#define MeasureIntervalN2O      600000                //Measure every 600sec (600000ms) 10 minutes
 unsigned long MeasureTimeTemp = 0;                    //Interval Between Last SampleNums And Now SampleNums
 unsigned long MeasureTimeHumi = 0;
 unsigned long MeasureTimeN2O = 0;
@@ -28,21 +28,21 @@ IpMtWrapper       ipmtwrapper;
 
 //============================== data generator ==================================
 void generateData(uint16_t* returnVal) {
-     if (millis() - MeasureTimeTemp >= MeasureIntervalTemp) {    //Measure temperature every 10 seconds
+     if (millis() - MeasureTimeTemp >= MeasureIntervalTemp) {    //Measure temperature every 1 minute
          MeasureTimeTemp = millis();                             //Reset Timer
          GetHIHSensor();
          returnVal[0] = (int)(Temp * 100);
-         returnVal[1] = 0;
-         returnVal[2] = 0;
+         returnVal[1] = 65535;                                   //Missing data filled with 65535 instead of 0 because 0 is valid data for N2O. Tried using -1 before but uint16_t data type only goes from 0 to 65535.
+         returnVal[2] = 65535;
          SDwrite(SENSOR_TEMP, Temp);
      }
-     if (millis() - MeasureTimeHumi >= MeasureIntervalHumi) {    //Measure humidity every 20 seconds
+     if (millis() - MeasureTimeHumi >= MeasureIntervalHumi) {    //Measure humidity every 2 minutes
          MeasureTimeHumi = millis();                             //Reset Timer
          returnVal[1] = (int)(Humi * 100);
-         returnVal[2] = 0;
+         returnVal[2] = 65535;
          SDwrite(SENSOR_HUMI, Humi);
      }
-     if (millis() - MeasureTimeN2O >= MeasureIntervalN2O) {      //Measure N2O every 30 seconds
+     if (millis() - MeasureTimeN2O >= MeasureIntervalN2O) {      //Measure N2O every 10 minutes
          MeasureTimeN2O = millis();                              //Reset Timer
          returnVal[2] = 1000;                                    //Placeholder value for N2O
          SDwrite(SENSOR_NO2, returnVal[2]);
@@ -66,7 +66,7 @@ void setup() {                                        //put your setup code here
 void loop() {
   // put your main code here, to run repeatedly:
   if (dataSent == true) {
-      sleep(10000);                                  //Have MCU sleep for 10 seconds after data has been sent
+      sleep(60000);                                  //Have MCU sleep for 10 seconds after data has been sent
   }
   dataSent = false;
   ipmtwrapper.loop();
