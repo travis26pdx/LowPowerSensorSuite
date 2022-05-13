@@ -226,7 +226,7 @@ class MeshNetwork():    # Mesh Network object structure : Contains multiple Mote
         for n in range(len(files)):
             if self.Motes[n].status == 'OPERATIONAL':
                 checkLastdate = os.stat(self.Dir + files[n]).st_mtime
-                notUpdated = abs(DtSeconds(dt) - checkLastdate) > (10 * 60)
+                notUpdated = abs(DtSeconds(dt) - checkLastdate) > (10 * 60) #Test
                 if notUpdated:
                     with open(self.Dir + self.Motes[n].Logname, 'r+') as f:
                         text = f.read()
