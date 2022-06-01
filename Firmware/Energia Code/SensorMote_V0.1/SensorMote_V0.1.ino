@@ -62,7 +62,7 @@ void generateData(uint16_t* returnVal) {
          N2OGet();
          returnVal[2] = (int)(N2OData * 100);
          digitalWrite(P4_3, LOW);                                //Apply 0V to gate of transistor
-         SDwrite(SENSOR_NO2, N2OData, millis());
+         SDwrite(SENSOR_N2O, N2OData, millis());
      }
      dataSent = true;
 }
