@@ -1,0 +1,29 @@
+Bill of Materials: ,Team 13,Second Generation Low Power Environmental Sensor Suite,,,,,,,
+Last Modified:,6/8/2022,,,,,,,,
+Schematic Version,1.1,,,,,,,,
+BOM revision:,1,,,,,,,,
+,,,,,,,,,
+Quantity,Part References,Mfg,Mfg PN,Description,Dist,Dist Part Number,Cost Ea.,Cost Total,URL
+1,1,Oshpark,N/A,Sensor Suite Junction Board,Osh Park,N/A,$35.50,$35.50,https://oshpark.com/
+1,2,Texas Instruments,MSP-EXP430FR5994,MSP430FR5994 Launchpad,Digi-Key,296-45386-ND,$20.39,$20.39,https://www.digikey.com/en/products/detail/texas-instruments/MSP-EXP430FR5994/6645208
+1,3,Samsung,N/A,"SD Card, 32 GB",Amazon,N/A,$17.99,$17.99,https://www.amazon.com/Samsung-MicroSDHC-Adapter-MB-ME32GA-AM/dp/B06XWN9Q99?th=1
+1,4,Analog Devices,DC9018B-B,DC9018B-B Evaluation Mote,Digi-Key,DC9018B-B,$360.00,$360.00,https://www.digikey.com/en/products/detail/analog-devices-inc/DC9018B-B/4696309
+1,5,Honeywell,HIH6120,SENS HUMI/TEMP 3.3V I2C 2% 4SIP,Digi-Key,480-5706-1-ND,$12.90,$12.90,https://www.digikey.com/en/products/detail/honeywell-sensing-and-productivity-solutions/HIH8120-021-001/4291627
+1,6,Dynament,DS0002,NO2 Sensor,Dynament,DS0002,$0.00,$0.00,https://www.dynament.com/products/gas-sensors/
+2,7,Yageo,RT1206BRD075KL,RES SMD 5K OHM 0.1% 1/4W 1206,Digi-Key,YAG5090CT-ND,$0.65,$1.30,https://www.digikey.com/en/products/detail/yageo/RT1206BRD075KL/5936961
+1,8,Otdorpatio,N/A,"Enclosure, IP67 Waterproof",Amazon,N/A,$27.99,$27.99,https://www.amazon.com/dp/B09F8YGGHB?ref=ppx_yo2ov_dt_b_product_details&th=1
+1,9,LeMotech,N/A,"1/4"" Cable Gland",Amazon,N/A,$0.55,$0.55,https://www.amazon.com/dp/B08ZYMDYHD?psc=1&ref=ppx_yo2ov_dt_b_product_details
+1,10,Striveday,N/A,"5-wire 1/4"" cable, 3 ft.",Amazon,N/A,$2.01,$2.01,https://www.amazon.com/dp/B07Y32RQ2Z?ref=ppx_yo2ov_dt_b_product_details&th=1
+1,11,ESUPPORT,N/A,5-wire automotive connector,Amazon,N/A,$2.46,$2.46,https://www.amazon.com/dp/B014P8XJQE?psc=1&ref=ppx_yo2ov_dt_b_product_details
+10,12,Wirefy,N/A,"heat shrink tubing, 1/8""",Amazon,N/A,$0.07,$0.70,https://www.amazon.com/dp/B084GDLSCK?psc=1&ref=ppx_yo2ov_dt_b_product_details
+1,13,Ltvystore,N/A,"Battery Holder, 4 slot, 18650",Amazon,N/A,$2.75,$2.75,https://www.amazon.com/dp/B07CWK81BJ?psc=1&ref=ppx_yo2ov_dt_b_product_details
+1,14,MELIFE,N/A,USB breakout board,Amazon,N/A,$0.84,$0.84,https://www.amazon.com/dp/B07W7XMV3W?psc=1&ref=ppx_yo2ov_dt_b_product_details
+1,15,Spater,N/A,Micro USB cable,Amazon,N/A,$1.60,$1.60,https://www.amazon.com/dp/B01FSYBQ9Q?psc=1&ref=ppx_yo2ov_dt_b_product_details
+4,16,SHENMZ,N/A,"18650 Battery, Lithium-ion, 3.7V",Amazon,N/A,$9.95,$39.78,https://www.amazon.com/dp/B071CHP4PL?psc=1&ref=ppx_yo2ov_dt_b_product_details
+2,17,Assmann WSW Components,H3CCH-2006G,"Ribbon Cable, 2x10",Digikey,H3CCH-2006G-ND,$1.35,$2.70,https://www.digikey.com/en/products/detail/assmann-wsw-components/H3CCH-2006G/1218561
+1,18,Assmann WSW Components,IDSD-16-D-02.00-T-G-RW-R,Ribbon Cable 2x16,Mouser,200-IDSD16D0200TGRWR,$13.40,$13.40,https://www.mouser.com/ProductDetail/Samtec/IDSD-16-D-02.00-T-G-RW-R?qs=0lQeLiL1qyYrkofe6uZx%252BA%3D%3D
+15,19,RuiLing,N/A,"Jumper Shunt, 2.54mm",Amazon,N/A,$0.03,$0.52,https://www.amazon.com/dp/B07VJKCHVN?psc=1&ref=ppx_yo2ov_dt_b_product_details
+1,20,Uxcell,N/A,8 pin adapter boards,Amazon,N/A,$0.32,$0.32,https://www.amazon.com/uxcell-Adapter-Board-Converter-25pcs/dp/B07FK4BQHL
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,Total:,$543.70,

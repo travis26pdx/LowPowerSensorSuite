@@ -1,0 +1,14 @@
+Bill of Materials: ,Team 13,Second Generation Low Power Environmental Sensor Suite,,,,,,,,
+Last Modified:,6/8/2022,,,,,,,,,
+Schematic version:,1.1,,,,,,,,,
+PCB version:,1.00,,,,,,,,,
+BOM revision:,1.00,,,,,,,,,
+,,,,,,,,,,
+Quantity,Part References,P/NP*,Mfg,Mfg PN,Description,Dist,Dist Part Number,Cost Ea.,Cost Total,URL
+1,U1,P,Oshpark,N/A,Sensor Suite Junction Board,Osh Park,N/A,$20.00,$20.00,https://oshpark.com/
+1,U6,P,Honeywell,HIH6120,SENS HUMI/TEMP 3.3V I2C 2% 4SIP,Digi-Key,480-5706-1-ND,$12.90,$12.90,https://www.digikey.com/en/products/detail/honeywell-sensing-and-productivity-solutions/HIH8120-021-001/4291627
+1,U5,P,Dynament,DS0002,NO2 Sensor,Dynament,DS0002,,$0.00,
+105,"J1-J9, J50/J51,J60/J61,J70/J71",P,MCIGICM,N/A,Pin Headers,Amazon,N/A,$0.01,$1.31,https://www.amazon.com/MCIGICM-Header-2-45mm-Arduino-Connector/dp/B07PKKY8BX/ref=sr_1_3?crid=1S1YS41OR59XP&keywords=pin+headers&qid=1654734282&s=electronics&sprefix=pin+headers%2Celectronics%2C153&sr=1-3
+2,"R1,R2",P,Yageo,RT1206BRD075KL,RES SMD 5K OHM 0.1% 1/4W 1206,Digi-Key,YAG5090CT-ND,$0.65,$1.30,https://www.digikey.com/en/products/detail/yageo/RT1206BRD075KL/5936961
+,,,,,,,,,,
+,,,,,,,,Total:,$35.51,
